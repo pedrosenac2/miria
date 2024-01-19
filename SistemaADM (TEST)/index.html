@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="assets/css/style2.css">
+	
+	<title>Home</title>
+</head>
+<body>
+	
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="index.html" class="brand"><i class='bx bxs-wink-smile bx-md icon'></i> Olá Miriã</a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon' ></i> Espaço do ADMIN</a></li>
+			<li class="divider" data-text="admin">Admin</li>
+			<li>
+				<a href="#"><i class='bx bxs-inbox bx-md icon' ></i> Cadastros <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#" id="cadastro-curso">Curso</a></li>
+					<li><a href="#" id="cadastro-aluno">E-Book</a></li>
+					<li><a href="#" id="cadastro-admin">Workshop</a></li>
+				</ul>
+			</li>
+
+			<li>
+				<a href="#"><i class='bx bxs-bell bx-tada bx-md icon'></i> Visualizar <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">Contatos Recebidos</a></li>
+					<li><a href="#">Usuarios Cadastrados</a></li>
+					<!-- <li><a href="#">Administradores</a></li> -->
+				</ul>
+			</li>
+			<li>
+				<a href="../projeto/index.html"><i class='bx bxs-log-out-circle bx-burst-hover bx-md icon'></i>Voltar para Home</a>
+			</li>
+		</ul>
+	</section>
+
+	<section id="content">
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Search...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<p>Olá, Miriã Mauge</p>
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?rs=1&pid=ImgDetMain" alt="">
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon' ></i> Perfil</a></li>
+					<li><a href="#"><i class='bx bxs-cog' ></i> Configurações</a></li>
+					<li><a href="#"><i class='bx bxs-log-out-circle' ></i> Sair</a></li>
+				</ul>
+			</div>
+		</nav>
+
+    <!-- tem um form do aluno aqui -->
+        <div id="form-aluno" style="display: none;">
+            <form action="assets/php/cadastro_aluno.php" method="POST">
+                <h1>Cadastro de Aluno</h1>
+                <br>
+                <br>
+                <label for="nome"><i class='bx bxs-user'></i> Nome:</label><br>
+                <input type="text" id="nome" name="nome"><br>
+
+                <label for="email"><i class='bx bx-envelope'></i> Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+
+                <label for="telefone"><i class='bx bx-phone'></i> Telefone:</label><br>
+                <input type="text" id="telefone" name="telefone"><br>
+
+                <label for="senha"><i class='bx bx-lock-alt'></i> Senha:</label><br>
+                <input type="password" id="senha" name="senha"><br>
+
+                <label for="confirmarSenha">Confirme a senha:</label><br>
+                <input type="password" id="confirmarSenha" name="confirmarSenha"><br>
+
+                <label for="foto"><i class='bx bx-image-alt'></i> Envie sua foto:</label><br>
+                <input type="file" id="foto" name="foto"><br>
+
+                <label for="cpf">CPF:</label><br>
+                <input type="text" id="cpf" name="cpf"><br>
+
+                <label for="data_nascimento">Data de Nascimento:</label><br>
+                <input type="date" id="data_nascimento" name="data_nascimento"><br>
+
+                <label for="sexo">Sexo:</label><br>
+                <select name="sexo" id="sexo">
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
+
+                <label for="documento">Documento:</label><br>
+                <select name="documento" id="documento">
+                    <option value="rg">RG</option>
+                </select>
+
+                <label for="numero_rg">Numero do RG:</label><br>
+                <input type="text" id="numero_rg" name="numero_rg"><br>
+
+                <label for="orgao_emissor">Orgão Emissor:</label><br>
+                <select name="orgao_emissor">
+                    <option value="ssp">SSP</option>
+                    <option value="detran">DETRAN</option>
+                    <option value="dpf">DPF</option>
+                    <option value="dic">DIC</option>
+                    <option value="igp">IGP</option>
+                    <option value="ifp">IFP</option>
+                    <option value="imesp">IMESP</option>
+                  </select>
+
+                <label for="estado_emissor">Estado Emissor:</label><br>
+                <select name="estado_emissor">
+                    <option value="ac">Acre (AC)</option>
+                    <option value="al">Alagoas (AL)</option>
+                    <option value="ap">Amapá (AP)</option>
+                    <option value="am">Amazonas (AM)</option>
+                    <option value="ba">Bahia (BA)</option>
+                    <option value="ce">Ceará (CE)</option>
+                    <option value="df">Distrito Federal (DF)</option>
+                    <option value="es">Espírito Santo (ES)</option>
+                    <option value="go">Goiás (GO)</option>
+                    <option value="ma">Maranhão (MA)</option>
+                    <option value="mt">Mato Grosso (MT)</option>
+                    <option value="ms">Mato Grosso do Sul (MS)</option>
+                    <option value="mg">Minas Gerais (MG)</option>
+                    <option value="pa">Pará (PA)</option>
+                    <option value="pb">Paraíba (PB)</option>
+                    <option value="pr">Paraná (PR)</option>
+                    <option value="pe">Pernambuco (PE)</option>
+                    <option value="pi">Piauí (PI)</option>
+                    <option value="rj">Rio de Janeiro (RJ)</option>
+                    <option value="rn">Rio Grande do Norte (RN)</option>
+                    <option value="rs">Rio Grande do Sul (RS)</option>
+                    <option value="ro">Rondônia (RO)</option>
+                    <option value="rr">Roraima (RR)</option>
+                    <option value="sc">Santa Catarina (SC)</option>
+                    <option value="sp">São Paulo (SP)</option>
+                    <option value="se">Sergipe (SE)</option>
+                    <option value="to">Tocantins (TO)</option>
+                  </select>
+
+                <label for="cep">CEP:</label><br>
+                <input type="text" id="cep" name="cep"><br>
+
+                <label for="rua">Rua:</label><br>
+                <input type="text" id="rua" name="rua"><br>
+
+                <label for="bairro">Bairro:</label><br>
+                <input type="text" id="bairro" name="bairro"><br>
+
+                <label for="numero">Numero:</label><br>
+                <input type="number" id="numero" name="numero"><br>
+
+                <label for="estado">Estado:</label><br>
+                <input type="text" id="estado" name="estado"><br>
+
+                <label for="cidade">Cidade:</label><br>
+                <input type="text" id="cidade" name="cidade"><br>
+
+                <label for="celular">Celular:</label><br>
+                <input type="text" id="celular" name="celular"><br>
+
+                <label for="observacao">Observação:</label><br>
+                <textarea id="observacao" name="observacao" rows="4" cols="50"></textarea><br>
+
+                <input type="submit" value="Cadastrar Aluno">
+            </form>
+        </div>
+
+	</section>
+
+    <!-- Main -->
+	
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
