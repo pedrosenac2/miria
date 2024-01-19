@@ -150,12 +150,15 @@ font-weight: 400;
 line-height: normal;
 letter-spacing: 16.38px;    
 }
-#container{
+.container{
+}
+#container-curso{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* border: rgb(255, 0, 0) solid; */
     width: 100%;
     gap: 5%;
+    
 }
 .curso{
     display: grid;
@@ -170,11 +173,43 @@ letter-spacing: 16.38px;
 .txt-curso{
     padding: 10px;
     background-color: #ECECEC;
+    color: #000;
+    font-family: Inter;
+    font-size: 13px;    
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .nome-curso{
     display: grid;
     justify-content:center;
 }
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Uma coluna para o input, outra para o botão */
+    align-items: center;
+    width: 47.5%;
+    border: #000 solid 1px;
+    border-radius: 15px;
+    margin:10px 0px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+ /* button {
+     padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white; 
+    border: none;
+    cursor: pointer;
+    border: #000 solid 1px;
+    border-radius: 15px;
+} */
 
 
 
