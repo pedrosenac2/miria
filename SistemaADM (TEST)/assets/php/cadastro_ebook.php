@@ -17,11 +17,11 @@ if ($conn->connect_error) {
 }
 
 // Prepara e vincula
-$stmt = $conn->prepare("INSERT INTO cursos () VALUES ()");
-$stmt->bind_param("",);
+$stmt = $conn->prepare("INSERT INTO ebooks () VALUES (?, ?, ?)");
+$stmt->bind_param("");
 
 // Define os parâmetros e executa
-$exemplo = $_POST['nome'];
+$nome = $_POST['nome'];
 
 $stmt->execute();
 

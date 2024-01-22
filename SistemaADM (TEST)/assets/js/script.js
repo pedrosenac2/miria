@@ -134,31 +134,6 @@ window.addEventListener('click', function (e) {
 	})
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('cadastro-aluno').addEventListener('click', function() {
-        document.getElementById('form-aluno').style.display = 'block';
-    });
-});
-
-
-document.getElementById('cep').addEventListener('change', function() {
-    var cep = this.value;
-    buscaEndereco(cep);
-});
-
-function buscaEndereco(cep) {
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            document.getElementById('rua').value = data.rua;
-            document.getElementById('bairro').value = data.bairro;
-            document.getElementById('estado').value = data.estado;
-            document.getElementById('cidade').value = data.cidade;
-        })
-        .catch(error => console.error('Erro ao buscar o endereço:', error));
-}
-
 
 $(document).ready(function(){
 	var SPMaskBehavior = function (val) {
@@ -185,33 +160,3 @@ $(document).ready(function(){
         return true;
     }
 }
-
-var cpf = document.querySelector("#cpf");
-cpf.addEventListener("input", function() {
-    if (isNaN(cpf.value)) {
-        cpf.value = "";
-    }
-    if (cpf.value.length > 11) {
-        cpf.value = cpf.value.substring(0, 11);
-    }
-});
-
-cpf.addEventListener("blur", function() {
-    if (cpf.value) {
-        cpf.value = cpf.value.match(/.{1,3}/g).join(".").replace(/.(?= .*$)/,"-");
-    }
-});
-
-var rg = document.querySelector("#rg");
-rg.addEventListener("input", function() {
-    rg.value = rg.value.replace(/[^0-9.]/g, "");
-    if (rg.value.length > 10) {
-        rg.value = rg.value.substring(0, 10);
-    }
-});
-
-rg.addEventListener("blur", function() {
-    if (rg.value) {
-        rg.value = rg.value.replace(/.(?=.$)/,"$&-");
-    }
-});
