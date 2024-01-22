@@ -150,7 +150,8 @@ font-weight: 400;
 line-height: normal;
 letter-spacing: 16.38px;    
 }
-.container{
+#container{
+    width: 100%;
 }
 #container-curso{
     display: grid;
