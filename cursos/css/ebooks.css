@@ -150,9 +150,15 @@ font-weight: 400;
 line-height: normal;
 letter-spacing: 16.38px;    
 }
+
+.title span{
+    color: #800000;
+}
+
 #container{
     width: 100%;
 }
+
 #container-curso{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -161,16 +167,19 @@ letter-spacing: 16.38px;
     gap: 5%;
     
 }
+
 .curso{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* border: #000000 solid; */
     background-color: #D9D9D9;
 }
+
 .img-curso{
     width: 262px;
     background-color: #D9D9D9
 }
+
 .txt-curso{
     padding: 10px;
     background-color: #ECECEC;
@@ -181,24 +190,29 @@ letter-spacing: 16.38px;
     font-weight: 400;
     line-height: normal;
 }
+
 .nome-curso{
     display: grid;
     justify-content:center;
 }
+
 .search-container {
     display: grid;
-    grid-template-columns: 1fr auto; /* Uma coluna para o input, outra para o botão */
-    align-items: center;
-    width: 47.5%;
-    border: #000 solid 1px;
-    border-radius: 15px;
+    grid-template-columns: 1fr auto;
+    width: 100%;
     margin:10px 0px;
 }
 
 input {
     padding: 10px;
     font-size: 16px;
-    border-radius: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.banner-title{
+    display: grid;
+    justify-content: center;
 }
 
  /* button {
