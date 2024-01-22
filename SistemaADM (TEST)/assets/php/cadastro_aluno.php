@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 
 // Prepara e vincula
-$stmt = $conn->prepare("INSERT INTO alunos (nome, email, telefone, senha, foto, cpf, data_nascimento, sexo, documento, numero_rg, orgao_emissor, estado_emissor, cep, rua, bairro, numero, estado, cidade, celular, observacao) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO cursos (nome, foto, cpf, data_nascimento, sexo, documento, numero_rg, orgao_emissor, estado_emissor, cep, rua, bairro, numero, estado, cidade, celular, observacao) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssssssssssssssissss", 
 $nome, $email, 
 $telefone, $senha, 

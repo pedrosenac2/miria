@@ -22,9 +22,6 @@ allDropdown.forEach(item=> {
 })
 
 
-
-
-
 // SIDEBAR COLLAPSE
 const toggleSidebar = document.querySelector('nav .toggle-sidebar');
 const allSideDivider = document.querySelectorAll('#sidebar .divider');
@@ -64,9 +61,6 @@ toggleSidebar.addEventListener('click', function () {
 	}
 })
 
-
-
-
 sidebar.addEventListener('mouseleave', function () {
 	if(this.classList.contains('hide')) {
 		allDropdown.forEach(item=> {
@@ -79,8 +73,6 @@ sidebar.addEventListener('mouseleave', function () {
 		})
 	}
 })
-
-
 
 sidebar.addEventListener('mouseenter', function () {
 	if(this.classList.contains('hide')) {
@@ -96,8 +88,6 @@ sidebar.addEventListener('mouseenter', function () {
 })
 
 
-
-
 // PROFILE DROPDOWN
 const profile = document.querySelector('nav .profile');
 const imgProfile = profile.querySelector('img');
@@ -106,8 +96,6 @@ const dropdownProfile = profile.querySelector('.profile-link');
 imgProfile.addEventListener('click', function () {
 	dropdownProfile.classList.toggle('show');
 })
-
-
 
 
 // MENU
@@ -121,7 +109,6 @@ allMenu.forEach(item=> {
 		menuLink.classList.toggle('show');
 	})
 })
-
 
 
 window.addEventListener('click', function (e) {
