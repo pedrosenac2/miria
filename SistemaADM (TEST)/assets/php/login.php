@@ -78,7 +78,7 @@ if ($result->num_rows > 0) {
     // A senha está correta, então inicia a sessão
     $_SESSION['admin_id'] = $admin['id'];
     $_SESSION['foto'] = $admin['foto'];
-    header('Location: ../home_adm.html');
+    header('Location:');
   } else {
     // A senha está incorreta
     echo "<script>alert('Senha incorreta! Por favor, tente novamente.');</script>";
