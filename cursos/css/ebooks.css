@@ -138,21 +138,33 @@ body {
 }
 
 /* fim meio */
-.title{
+.title-container{
     display: grid;
-    justify-content: center;
-    color: #000;
+    justify-content: center; 
+}
 
-font-family: Inter;
-font-size: 63px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 16.38px;    
+.title{
+    margin-top: 18px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 70px;
+    letter-spacing: 20.8px; 
+}
+
+.subtitle{
+    color: #000;
+    font-family: Roboto;
+    font-size: 30px;
+    letter-spacing: 7.8px;
+    margin-bottom: 51px;
 }
 
 .title span{
     color: #800000;
+}
+
+.subtitle span{
+    color: #858585;
 }
 
 #container{
@@ -161,8 +173,7 @@ letter-spacing: 16.38px;
 
 #container-curso{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* border: rgb(255, 0, 0) solid; */
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     gap: 5%;
     
@@ -170,13 +181,13 @@ letter-spacing: 16.38px;
 
 .curso{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* border: #000000 solid; */
+    grid-template-columns: repeat(1, 1fr);
     background-color: #D9D9D9;
 }
 
 .img-curso{
-    width: 262px;
+    width: 295px;
+    height: 209px;
     background-color: #D9D9D9
 }
 
@@ -196,37 +207,29 @@ letter-spacing: 16.38px;
     justify-content:center;
 }
 
-.search-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    width: 100%;
-    margin:10px 0px;
+.search{
+    width: 820px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-bottom: 65px;
 }
 
-input {
-    padding: 10px;
+input{
+    width: 95%;
+    padding: 6px 14px;
     font-size: 16px;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: none;
+}
+
+button{
+    border: none;
+    background: none;
 }
 
 .banner-title{
     display: grid;
     justify-content: center;
 }
-
- /* button {
-     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white; 
-    border: none;
-    cursor: pointer;
-    border: #000 solid 1px;
-    border-radius: 15px;
-} */
-
-
 
 /* footer */
 
