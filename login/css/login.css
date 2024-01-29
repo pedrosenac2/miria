@@ -66,32 +66,27 @@ body {
 
 #container-login {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 57vh;
 }
 
- .container-grid {
-    background-color: #fff;
+ #container-grid {
+    display: grid;
+    justify-content: center;
     padding: 20px;
     border-radius: 8px;
     text-align: left;   
-    background: #FFF;
     box-shadow: -9px 26px 20px 0px rgba(0, 0, 0, 0.25);
-    align-items:center;
-    width: 45%;
-    height: auto;
+    width: 37%;
 } 
 
 form {
-    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     color: #800000;
 } 
@@ -117,7 +112,8 @@ button {
     height: 50px;
     flex-shrink: 0;
     border-radius: 3px;
-
+    align-self: center;
+    justify-self: center;   
 }
 
 button:hover {
@@ -148,7 +144,16 @@ button:hover {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2.6px;
-
+}
+.centraliza-botao{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    text-align: center;
+}
+.centraliza-botao a{
+    color: #800000;
+    text-decoration: none;
 }
 
 #semititle{
@@ -165,10 +170,6 @@ button:hover {
 }
 a:hover{
     text-decoration: underline;
-}
-#casdastroform{
-    width: 300px;
-
 }
 
 
