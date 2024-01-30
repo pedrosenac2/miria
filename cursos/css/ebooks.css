@@ -167,15 +167,16 @@ body {
     color: #858585;
 }
 
-#container{
+.container{
     width: 100%;
 }
 
-#container-curso{
+.container-curso{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     gap: 5%;
+    margin-bottom: 150px;
     
 }
 
@@ -224,6 +225,18 @@ input{
 button{
     border: none;
     background: none;
+}
+
+.veja-mais{
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.button-container{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .banner-title{
