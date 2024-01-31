@@ -175,15 +175,18 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    gap: 5%;
-    margin-bottom: 150px;
-    
+    gap: 27px;
+    margin-bottom: 100px;
 }
 
 .curso{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     background-color: #D9D9D9;
+}
+
+.curso:nth-child(n+10){
+    display: none;
 }
 
 .img-curso{
@@ -220,6 +223,7 @@ input{
     padding: 6px 14px;
     font-size: 16px;
     border: none;
+    border-radius: 10px ;
 }
 
 button{
