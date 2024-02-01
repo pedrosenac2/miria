@@ -185,7 +185,7 @@ body {
     background-color: #D9D9D9;
 }
 
-.curso:nth-child(n+10){
+.link-curso:nth-child(n+10){
     display: none;
 }
 
@@ -246,6 +246,11 @@ button{
 .banner-title{
     display: grid;
     justify-content: center;
+}
+.link-curso:hover{
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
 }
 
 /* footer */

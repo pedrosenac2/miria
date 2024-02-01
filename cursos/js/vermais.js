@@ -2,7 +2,7 @@ const button = document.querySelector(".veja-mais")
 
 button.addEventListener("click", function(){
     const hideElements = []
-    document.querySelectorAll(".curso").forEach(function(element){
+    document.querySelectorAll(".link-curso").forEach(function(element){
         if(window.getComputedStyle(element).display == "none"){
             hideElements.push(element)
         }
