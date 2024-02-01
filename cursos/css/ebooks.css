@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -146,29 +148,65 @@ body {
 .title{
     margin-top: 18px;
     color: #000;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 70px;
     letter-spacing: 20.8px; 
 }
 
+.title::before{
+    content: "";
+    display: inline-block;
+    background-color: #800000;
+    vertical-align: middle;
+    margin-right: 14px;
+    width: 51px;
+    height: 8px;
+}
+
+.title::after{
+    content: "";
+    display: inline-block;
+    background-color: #800000;
+    vertical-align: middle;
+    width: 51px;
+    height: 8px;
+}
+
 .subtitle{
     color: #000;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 30px;
     letter-spacing: 7.8px;
     margin-bottom: 51px;
 }
 
-.title span{
-    color: #800000;
-}
-
-.subtitle span{
-    color: #858585;
+.subtitle::after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    
+    background-color: #858585;
+    width: 289px;
+    height: 2px;
 }
 
 .container{
     width: 100%;
+}
+
+.ebook-filter{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.ordenar-por{
+    display: flex;
+    justify-content: end;
+}
+
+.ordenar-por label{
+    margin-right: 10px;
 }
 
 .container-curso{
@@ -182,7 +220,7 @@ body {
 .curso{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    background-color: #D9D9D9;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .curso:nth-child(n+10){
@@ -190,9 +228,8 @@ body {
 }
 
 .img-curso{
-    width: 295px;
+    width: 100%;
     height: 209px;
-    background-color: #D9D9D9
 }
 
 .txt-curso{
