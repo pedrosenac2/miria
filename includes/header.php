@@ -1,7 +1,9 @@
+
 <?php
 
 if(str_contains($_SERVER['REQUEST_URI'], 'index')){
-    ?>
+?>
+
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid mb-5">
@@ -44,7 +46,8 @@ if(str_contains($_SERVER['REQUEST_URI'], 'index')){
     <!-- Fim Nav -->
 <?php
 }
-else{ ?>
+else{ 
+?>
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid mb-5">
