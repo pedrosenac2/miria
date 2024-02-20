@@ -3,34 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/ebooks.css">
+	<link rel="stylesheet" href="../assets/css/ebooks.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	
 	<title>E-books-Miriã Mauge</title>
 </head>
 <body>
-    <!-- cabeçalho -->
-    <div class="header">
-        
-        <div class="logo">
-            <span style="color: grey;">Miriã </span>
-            <span style="color: maroon;">Mauge</span>
-        </div>
 
-        <div class="navigation">
-            <a href="../home/index.html"">Home</a>
-            <a href="#">Contato</a>
-
-            <div class="dropdown">
-                <a href="#">Workshop</a>
-            </div>
-
-            <a href="cursos.html">Cursos</a>
-            <a href="e-books.html">E-books</a>
-            <a href="#">Dúvidas</a>
-            <a href="#">Login</a>
-        </div>
-    </div>
+    <?php
+        include('../includes/header.php');
+    ?>
 
         <div class="banner-title">
             <div class="title-container">
@@ -310,38 +292,12 @@
                 <div class="button-container"><button class="veja-mais">Veja Mais</button></div>
         </div>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-column1">
-                    <div class="navigation">
-                        <a href="index.html">Home</a>
-                        <a href="#">Contato</a>
-                        <a href="#">Workshop</a>
-                        <a href="#">Cursos</a>
-                        <a href="#">E-books</a>
-                    </div>
-                </div>
-                <div class="footer-column2">
-                    <h3>Entre em Contato</h3>
-                    <p>Telefone: <a href="tel:1234-5678">3333-0000</a></p>
-                    <p>Email: <a href="mailto:exemplo@exemplo.com">exemplo@exemplo.com</a></p>
-                </div>
-                <div class="footer-column3">
-                    <h3>Redes Sociais</h3>
-    
-                    <div>
-                        <a class="instagram" href="#"><img width="60" height="60" src="https://img.icons8.com/cute-clipart/64/instagram-new.png" alt="instagram-new"/></a>
-                        <a class="linkedin" href="#"><img width="58" height="58" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 Site Miriã Mauge. Todos os direitos reservados.</p>
-            </div>
-        </footer>
+        <?php
+            include('../includes/footer.php');
+        ?>
         
         <script src="https://kit.fontawesome.com/3490f069b7.js" crossorigin="anonymous"></script>
-        <script src="js/vermais.js"></script>
+        <script src="../assets/js/vermais.js"></script>
     </body>
     </html>
     <!-- fim cabeçalho -->

@@ -3,34 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/ebooks.css">
+	<link rel="stylesheet" href="../assets/css/ebooks.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	
 	<title>Cursos-Miriã Mauge</title>
 </head>
 <body>
-    <!-- cabeçalho -->
-    <div class="header">
-        
-        <div class="logo">
-            <span style="color: grey;">Miriã </span>
-            <span style="color: maroon;">Mauge</span>
-        </div>
 
-        <div class="navigation">
-            <a href="index.html">Home</a>
-            <a href="#">Contato</a>
-
-            <div class="dropdown">
-                <a href="#">Workshop</a>
-            </div>
-
-            <a href="cursos.html">Cursos</a>
-            <a href="#">E-books</a>
-            <a href="#">Dúvidas</a>
-            <a href="#">Login</a>
-        </div>
-    </div>
+    <?php
+        include('../includes/header.php');
+    ?>
+    
     <div class="banner-title">
         <div class="title-container">
             <h1 class="title">Cursos</h1>
@@ -454,8 +437,13 @@
    
                        
         </div>
+
+        <?php
+            include('../includes/footer.php');
+        ?>
+        
     <script src="https://kit.fontawesome.com/3490f069b7.js" crossorigin="anonymous"></script>
-    <script src="js/vermais.js"></script>
+    <script src="../assets/js/vermais.js"></script>
     
     </body>
     </html>
