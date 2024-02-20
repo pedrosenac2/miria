@@ -1,132 +1,188 @@
-<!-- template da Serenity, fazer download -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	
-	<title>Home</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    
+    <title>Site MiriaMauge</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+    </style>
+
+
 </head>
-<body>
-    <!-- cabeçalho -->
+
+<body class="p-0 m-0 border-0 bd-example m-0 border-0">
+    <!-- start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center">
+                <a class="navbar-brand fs-3" href="index.html">
+                    <strong style="font-size: 40px;"> <span style="color: dark; font-weight: lighter;">Miriã
+                        </span><span style="color: maroon;"> Maugé </span></strong>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- End -->
 
     <?php
-        include('includes/header.php');
+        include_once 'header.html';
     ?>
 
-    <!-- fim cabeçalho -->
-
-
     <!-- esse cara é o cassosel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="assets/img/banner1.jpg" alt="Banner A">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/banner2.jpg" alt="Banner B">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/banner3.jpg" alt="Banner C">
-          </div>
+            <div class="carousel-item active">
+                <img src="assets/img/img_banner/banner2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/img_banner/banner1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/img_banner/banner3.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Voltar</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- acaba o carrosel aqui -->
+
+
+
+    <!-- Cards corpo da pagina -->
+
+    <div class="header">
+        <h1>Conduzindo você em:</h1>
+        <h1>Autoconhecimento, propósito e sucesso profissional.</h1>
+
+        <p style="font-size: 30px;">Descubra quem você é, seu propósito e transforme sua carreira.</p>
+    </div>
+    <div class="row1-container">
+        <div class="box box-down cyan">
+            <h2 class="text-center">Encontre-se</h2>
+            <p>Aprenda a se conhecer melhor, a descobrir o seu propósito de vida e a transformar a sua carreira com os
+                nossos métodos exclusivos.</p>
+            <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+        </div>
+
+        <div class="box red">
+            <h2 class="text-center">Transforme-se</h2>
+            <p>Você sabe quem você é, o que você quer e como você pode chegar lá ? Nós te ajudamos a responder essas
+                perguntas e a mudar a sua carreira para melhor.</p>
+            <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+        </div>
+
+        <div class="box box-down blue">
+            <h2 class="text-center">Mude</h2>
+            <p>Conecte-se com o seu propósito e mude a sua carreira com a nossa orientação profissional.</p>
+            <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+        </div>
+    </div>
+    <div class="row2-container mt-5 mb-4">
+        <div class="box orange">
+            <h2 class="text-center">Revele</h2>
+            <p>Revele a sua verdadeira identidade, alinhe o seu propósito com a sua carreira e cresça profissionalmente
+                com o nosso acompanhamento personalizado.</p>
+            <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+        </div>
+    </div>
+
+    <!-- Fim Cards -->
+
+    <!-- Sobre -->
+    <div class="container mt-5">
+
+        <a href="index.html" class="mb-4 text-decoration-none"
+            style="color: rgb(2, 108, 207); display: inline-block; width: auto; font-size: 18px;">
+            / Sobre Min
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
-      </div>
-      <!-- acaba o carrosel aqui -->
+        <div class="row align-items-start">
+            <!-- Div da esquerda com o caminho, título e texto -->
 
-
-
-      <!-- começo conteudo -->
-      <div class="section">
-        <h2>Lorem ipsum dolor sit amet (titulo)</h2>
-
-        <div class="item">
-            <img src="assets/img/img_conteudo/img_treinamento.jpg" alt="Imagem do serviço 1">
-            
-            <div>
-                <h3>T&D - Treinamentos e Desenvolvimento de Equipes</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            
-                <div style="text-align: right;">
-                    <a href="#">Saiba Mais <i class="fa-solid fa-circle-arrow-right"></i></a>
+            <div class="col-sm-6">
+                <div class="title">
+                    <h2>Miriã Maugé</h2>
+                </div>
+                <div class="text">
+                    <p>
+                        Minha Missão é inspirar e implementar soluções
+                        para o
+                        desafio ambiental. Estamos comprometidos em aumentar a conscientização e o entendimento sobre
+                        questões ambientais e a necessidade urgente de ação. Além disso, buscamos desenvolver e promover
+                        novas tecnologias que minimizem nosso impacto no meio ambiente.
+                    </p>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="assets/img/img_conteudo/img_workshop.jpg" alt="Imagem do serviço 2">
-            
-            <div>
-                <h3>Eventos</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            
-                <div style="text-align: right;">
-                    <a href="#">Saiba Mais <i class="fa-solid fa-circle-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="assets/img/img_conteudo/img_cursos.jpg" alt="Imagem do serviço 3">
-            
-            <div>
-                <h3>Cursos</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                
-                <div style="text-align: right;">
-                    <a href="#">Saiba Mais <i class="fa-solid fa-circle-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="assets/img/img_conteudo/img_ebook.jpg" alt="Imagem do serviço 4">
-            
-            <div>
-                <h3>E-Books</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                
-                <div style="text-align: right;">
-                    <a href="#">Saiba Mais <i class="fa-solid fa-circle-arrow-right"></i></a>
-                </div>
+            <!-- Div da direita com a imagem -->
+            <div class="col-sm-6">
+                <img src="assets/img/miria.png" alt="Descrição da imagem" style="width: 70%;">
             </div>
         </div>
     </div>
-      <!-- fim conteudo -->
 
-      <!-- SOBRE MIRIÃ -->
+    <!-- Fim Sobre-->
+
+    <?php
+        include_once 'footer.html';
+    ?>
 
 
-
-      <!-- FIM SOBRE -->
-
-      <!-- footer -->
-
-      <?php
-            include('includes/footer.php');
-        ?>
-
-    <!-- fim footer -->
-
-    <!-- scripts -->
-
-    <script src="assets/js/scripts.js"></script>
+    <div
+        style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;">
+        <a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank"
+            href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img
+                src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"
+                alt="www.000webhost.com"></a>
+    </div>
+    <!-- Incluindo os arquivos JavaScript do Bootstrap (jQuery necessário) -->
     <script src="https://kit.fontawesome.com/2eeb56781b.js" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- fim -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
