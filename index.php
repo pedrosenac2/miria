@@ -45,7 +45,11 @@
     <!-- End -->
 
     <?php
-        include_once 'header.html';
+        include_once 'includes/header.php';
+    ?>
+
+<?php
+        include ('includes/footer.php');
     ?>
 
     <!-- esse cara é o cassosel -->
@@ -159,9 +163,7 @@
 
     <!-- Fim Sobre-->
 
-    <?php
-        include_once 'footer.html';
-    ?>
+ 
 
 
     <div
