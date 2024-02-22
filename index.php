@@ -4,26 +4,25 @@
 <head>
     <meta charset="utf-8" />
 
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    
+
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    
+
     <!-- <link rel="stylesheet" href=""> -->
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Site MiriaMauge</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
-
     </style>
 
 
@@ -32,7 +31,7 @@
 <body class="p-0 m-0 border-0 bd-example m-0 border-0">
 
     <!-- Botão Flutuante -->
-    <div class="fab">
+    <!-- <div class="fab">
         <button class="main">
         </button>
         <ul>
@@ -61,25 +60,9 @@
                 </button>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- Fim Botão -->
-
-    <!-- start -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-center">
-                <a class="navbar-brand fs-3" href="index.html">
-                    <strong style="font-size: 40px;"> <span style="color: dark; font-weight: lighter;">Miriã
-                        </span><span style="color: maroon;"> Maugé </span></strong>
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-    <!-- End -->
 
     <?php
     include_once 'includes/header.php';
@@ -197,7 +180,7 @@
     <!-- fim footer -->
 
 
-<!-- 
+    <!-- 
     <div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;">
         <a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a>
     </div> -->

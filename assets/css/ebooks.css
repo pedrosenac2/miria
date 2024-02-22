@@ -20,23 +20,6 @@
     --weight3: 600;
 }
 
-.container1 {
-    text-align: start;
-    color: white;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-left: 300px;
-    justify-content: center;
-    background-image: url(3.jpg);
-    background-size: cover;
-    background-position: center;
-
-    /*  this is where the magic happens:  */
-    background-attachment: fixed;
-}
-
 h1 {
     font-weight: 700;
     font-size: 3rem;
@@ -61,15 +44,11 @@ a {
     font-size: .875rem;
 }
 
+/* webhost */
 .blank {
     width: 400px;
 }
 
-h3 {
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-top: 1em;
-}
 
 .navbar-nav {
     display: flex;
@@ -81,25 +60,6 @@ h3 {
     margin-bottom: 20px;
     width: 100%;
     font-size: 20px;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-h1:first-of-type {
-    font-weight: var(--weight1);
-    color: var(--varyDarkBlue);
-
-}
-
-h1:last-of-type {
-    color: var(--varyDarkBlue);
 }
 
 @media (max-width: 400px) {
@@ -122,21 +82,6 @@ h1:last-of-type {
 }
 
 
-.box p {
-    color: var(--grayishBlue);
-}
-
-.box {
-    border-radius: 5px;
-    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
-    padding: 30px;
-    margin: 20px;
-}
-
-img {
-    float: right;
-}
-
 
 
 @media (max-width: 450px) {
@@ -151,28 +96,6 @@ img {
         height: 180px;
     }
 }
-
-.cyan {
-    border-top: 3px solid var(--cyan);
-}
-
-.red {
-    border-top: 3px solid var(--red);
-}
-
-.blue {
-    border-top: 3px solid var(--blue);
-}
-
-.orange {
-    border-top: 3px solid var(--orange);
-}
-
-h2 {
-    color: var(--varyDarkBlue);
-    font-weight: var(--weight3);
-}
-
 
 @media (min-width: 950px) {
     .row1-container {
@@ -203,13 +126,6 @@ h2 {
 
 }
 
-.text p {
-    color: #666;
-    line-height: 1.6;
-    text-align: justify;
-    font-size: 26px;
-
-}
 
 /* fim meio */
 .title-container{
@@ -293,6 +209,10 @@ h2 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.link-curso{
+    text-decoration: none;
 }
 
 .link-curso:nth-child(n+10){
