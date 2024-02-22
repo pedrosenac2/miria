@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,35 +20,7 @@
     --weight3: 600;
 }
 
-.container1 {
-    text-align: start;
-    color: white;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-left: 300px;
-    justify-content: center;
-    background-image: url(3.jpg);
-    background-size: cover;
-    background-position: center;
-
-    /*  this is where the magic happens:  */
-    background-attachment: fixed;
-}
-
-h1 {
-    font-weight: 700;
-    font-size: 3rem;
-}
-
-p {
-    max-width: 52ch;
-    line-height: 1.5;
-    padding: 1em;
-}
-
-a {
+.navbar-collapse .navbar-nav .nav-item .nav-link a {
     display: inline-block;
     padding: 1em 3.5em;
     background-color: var(grey);
@@ -61,45 +33,23 @@ a {
     font-size: .875rem;
 }
 
+/* Webhost */
 .blank {
     width: 400px;
 }
+/* fim */
 
-h3 {
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-top: 1em;
-}
 
+/* header */
 .navbar-nav {
     display: flex;
     justify-content: space-around;
     text-align: justify;
-    /* align-items: center; */
     gap: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%;
     font-size: 20px;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
-h1:first-of-type {
-    font-weight: var(--weight1);
-    color: var(--varyDarkBlue);
-
-}
-
-h1:last-of-type {
-    color: var(--varyDarkBlue);
 }
 
 @media (max-width: 400px) {
@@ -203,6 +153,7 @@ h2 {
 
 }
 
+
 .text p {
     color: #666;
     line-height: 1.6;
@@ -210,3 +161,122 @@ h2 {
     font-size: 26px;
 
 }
+
+
+/* Botão Flutuante */
+.fab {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.fab button {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    background-color: #cb60b3;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+    font-size: 24px;
+    color: white;
+
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+
+.fab button:focus {
+    outline: none;
+}
+
+.fab button.main {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #07a7cf;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.fab button.main:before {
+    content: '⏚';
+}
+
+.fab ul {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    padding-right: 5px;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+
+.fab ul li {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: -10%;
+    opacity: 0;
+
+    -webkit-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+.fab ul li label {
+    margin-right: 10px;
+    white-space: nowrap;
+    display: block;
+    margin-top: 10px;
+    padding: 5px 8px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    height: 18px;
+    font-size: 16px;
+    pointer-events: none;
+    opacity: 0;
+
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+
+.fab.show button.main,
+.fab.show button.main {
+    outline: none;
+    background-color: #7716ff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .5);
+}
+
+.fab.show button.main:before,
+.fab.show button.main:before {
+    content: '↑';
+}
+
+.fab.show button.main+ul,
+.fab.show button.main+ul {
+    bottom: 70px;
+}
+
+.fab.show button.main+ul li,
+.fab.show button.main+ul li {
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.fab.show button.main+ul li:hover label,
+.fab.show button.main+ul li:hover label {
+    opacity: 1;
+}
+
+/* Fim */
