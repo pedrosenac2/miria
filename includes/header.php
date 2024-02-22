@@ -18,10 +18,10 @@ if(str_contains($_SERVER['REQUEST_URI'], 'index')){
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item me-5 ">
-                        <a class="nav-link" href="../pages/cursos.php">Cursos</a>
+                        <a class="nav-link" href="pages/cursos.php">Cursos</a>
                     </li>
                     <li class="nav-item me-5 ">
-                        <a class="nav-link" href="../pages/e-books.php" role="button" aria-expanded="false">
+                        <a class="nav-link" href="pages/e-books.php" role="button" aria-expanded="false">
                             E-Books
                         </a>
                     </li>
