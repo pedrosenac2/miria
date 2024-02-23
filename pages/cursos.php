@@ -28,7 +28,7 @@
         <div class="search">
             <form action="" method="post">
                 <input type="text" name="searchbar" id="searchbar" placeholder="Pesquise por um e-book">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="searchbutton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div> 
     </div>
