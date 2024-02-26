@@ -22,6 +22,10 @@
 <body>
 
     <?php
+    include '../includes/botaoFlutuante.php'
+    ?>
+
+    <?php
     include('../includes/header.php');
     ?>
 
@@ -40,15 +44,8 @@
             </div>
             <div class="col-md-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/gh6txL0S5ME?si=lj5g2MN9VitRmspt" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-            </iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gh6txL0S5ME?si=lj5g2MN9VitRmspt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
