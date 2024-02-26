@@ -311,3 +311,9 @@ input[type="submit"]:hover {
 }
 
 /* fim */
+
+/* Css do Ebook Especifico */
+.container .row .col-sm a{
+    width: 40px;
+}
+/* Fim */

@@ -7,27 +7,47 @@
 // Use this file to add JavaScript to your project
 
 
-    // Obtém todos os links de navegação
-    var navLinks = document.querySelectorAll('.header .navigation a');
+// Obtém todos os links de navegação
+var navLinks = document.querySelectorAll('.header .navigation a');
 
-    // Itera sobre cada link
-    for (var i = 0; i < navLinks.length; i++) {
-        // Verifica se o href do link corresponde à URL da página atual
-        if (navLinks[i].href == document.URL) {
-            // Adiciona a classe 'active' ao link
-            navLinks[i].className = 'active';
-        }
+// Itera sobre cada link
+for (var i = 0; i < navLinks.length; i++) {
+    // Verifica se o href do link corresponde à URL da página atual
+    if (navLinks[i].href == document.URL) {
+        // Adiciona a classe 'active' ao link
+        navLinks[i].className = 'active';
     }
+}
 
 
-    // Opcional
+// Opcional
 
-    // var navLinkFooter = document.querySelectorAll('.footer-container .footer-column1 .navigation a');
+// var navLinkFooter = document.querySelectorAll('.footer-container .footer-column1 .navigation a');
 
-    // for (var i = 0; i < navLinkFooter.length; i++){
-    //     if(navLinkFooter[i].href == document.URL){
-    //         navLinkFooter[i].className = 'active';
-    //     }
-    // }
+// for (var i = 0; i < navLinkFooter.length; i++){
+//     if(navLinkFooter[i].href == document.URL){
+//         navLinkFooter[i].className = 'active';
+//     }
+// }
 
-    // 
+// 
+
+// Botão Flutuante
+
+function toggleFAB(fab) {
+    if (document.querySelector(fab).classList.contains('show')) {
+        document.querySelector(fab).classList.remove('show');
+    } else {
+        document.querySelector(fab).classList.add('show');
+    }
+}
+
+document.querySelector('.fab .main').addEventListener('click', function () {
+    toggleFAB('.fab');
+});
+
+document.querySelectorAll('.fab ul li button').forEach((item) => {
+    item.addEventListener('click', function () {
+        toggleFAB('.fab');
+    });
+});

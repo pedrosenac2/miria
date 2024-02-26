@@ -15,8 +15,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-    <!-- <link rel="stylesheet" href=""> -->
-
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Site MiriaMauge</title>
@@ -31,37 +29,10 @@
 <body class="p-0 m-0 border-0 bd-example m-0 border-0">
 
     <!-- Botão Flutuante -->
-    <!-- <div class="fab">
-        <button class="main">
-        </button>
-        <ul>
-            <li>
-                <label for="curso">Cursos</label>
-                <button id="curso">
-                    ⎈
-                </button>
-            </li>
-            <li>
-                <label for="ebook">E-books</label>
-                <button id="ebook">
-                    ⎗
-                </button>
-            </li>
-            <li>
-                <label for="evento">Eventos</label>
-                <button id="evento">
-                    ☏
-                </button>
-            </li>
-            <li>
-                <label for="contato">Contato</label>
-                <button id="contato">
-                    ☏
-                </button>
-            </li>
-        </ul>
-    </div> -->
 
+    <?php
+        include 'includes/botaoFlutuante.php'
+    ?>
     <!-- Fim Botão -->
 
     <?php
@@ -101,7 +72,7 @@
 
 
 
-    <!-- Cards corpo da pagina -->
+    <!-- Cards da pagina -->
 
     <div class="header">
         <h1>Conduzindo você em:</h1>
@@ -144,12 +115,12 @@
     <!-- Sobre -->
     <div class="container mt-5">
 
-        <a href="index.html" class="mb-4 text-decoration-none" style="color: rgb(2, 108, 207); display: inline-block; width: auto; font-size: 18px;">
+        <span class="mb-4 text-decoration-none" style="color: rgb(2, 108, 207); display: inline-block; width: auto; font-size: 18px;">
             / Sobre Min
-        </a>
+        </span>
+
         <div class="row align-items-start">
             <!-- Div da esquerda com o caminho, título e texto -->
-
             <div class="col-sm-6">
                 <div class="title">
                     <h2>Miriã Maugé</h2>
@@ -164,6 +135,8 @@
                     </p>
                 </div>
             </div>
+            <!-- fim -->
+
             <!-- Div da direita com a imagem -->
             <div class="col-sm-6">
                 <img src="assets/img/miria.png" alt="Descrição da imagem" style="width: 70%;">
