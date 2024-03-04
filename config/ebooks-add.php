@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?php
+
 // include "conexao.php";
 
 // if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -56,4 +56,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // }else{
 //     echo "Acesso Inválido";
 // }
-?>
