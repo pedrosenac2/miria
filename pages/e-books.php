@@ -20,7 +20,7 @@
 <body>
 
     <?php
-    include '../includes/botaoFlutuante.php'
+    // include '../includes/botaoFlutuante.php'
     ?>
 
     <?php
