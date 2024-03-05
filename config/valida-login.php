@@ -7,7 +7,7 @@ try{
     include "conexao.php";
 
     $email = $_POST['loginEmail'];
-    $senha = $_POST['loginSenha'];
+    $senha = sha1($_POST['loginSenha']);
 
     if($email == ''){
         echo "Preencha o e-mail";

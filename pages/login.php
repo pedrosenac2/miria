@@ -21,40 +21,23 @@ session_destroy();
 session_unset();
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../assets/css/login.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	
-	<title>Login-Miriã Mauge</title>
-</head>
-<body>
-    <div class="header">
-        <div class="logo">
-            <span style="color: grey;">Miriã </span>
-            <span style="color: maroon;">Mauge</span>
-        </div>
-        <div class="navigation">
-            <a href="#">Home</a>
-            <a href="#">Workshop</a>
-            <a href="#">Cursos</a>
-            <a href="#">E-books</a>
-            <a href="#">Contato</a>
-            <a href="#">Login</a>
-        </div>
-    </div>
-    <!-- <div class="banner"></div> -->
-    <!-- Começo do Conteúdo da Pagina -->
-        <div id="container-login">
-            <div id="container-grid">
-                <form action="../config/valida-login.php" method="post" id="loginForm">
-                <?php
+    <link rel="stylesheet" href="../assets/css/login.css">
+  </head>
+  <body>
+    <section class="vh-100">
+      <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <form action="../config/valida-login.php" method="post">
+
+            <?php
                     if($erro != ''){
                 ?>
                                             
@@ -64,68 +47,54 @@ session_unset();
 
                 <?php 
                     }
-                ?>
-                    <center><h2>Login</h2></center>
-                    <label for="loginEmail">Email:</label>
-                    <input type="email" id="loginEmail" name="loginEmail" required>
+              ?>
 
-                        <label for="loginSenha">Senha:</label>
-                        <input type="password" id="loginSenha" name="loginSenha" required>
-                        
-                        <div id="grid-botao">
-                                <div class="botao-">
-                                <a class="link" href="esqueceusenha.html">Esqueceu sua senha?</a>
-                            </div>
-                            <div class="botao">
-                                <button type="submit">Entrar</button>
-                            </div>
-                         </div>
-                         <a class="link" href="cadastro.html">Não tem cadastro?</a>
-                </form>
-                
-            </div>
-        </div>
-    <!-- Fim do Conteúdo da Pagina -->
+              <div class="divider d-flex align-items-center my-4">
+                <h1 class="text-center fw-bold mx-3 mb-0">Login</h1>
+              </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column1">
-                <div class="navigation">
-                    <a href="index.html">Home</a>
-                    <a href="#">Contato</a>
-                    <a href="#">Workshop</a>
-                    <a href="#">Cursos</a>
-                    <a href="#">E-books</a>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label class="form-label" for="loginEmail">
+                        E-mail
+                </label>
+                <input type="email" name="loginEmail" id="loginEmail" class="form-control form-control-lg" placeholder="Insira um endereço de email" required/>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-3">
+                <label class="form-label" for="loginSenha">Senha</label>
+                <input type="password" name="loginSenha" id="loginSenha" class="form-control form-control-lg" placeholder="Sua senha" required/>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <!-- Checkbox -->
+                <div class="form-check mb-0">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3"/>
+                  <label class="form-check-label" for="form2Example3">
+                    Lembrar senha
+                  </label>
                 </div>
-            </div>
-            <div class="footer-column2">
-                <h3>Entre em Contato</h3>
-                <p>Telefone: <a href="tel:1234-5678">3333-0000</a></p>
-                <p>Email: <a href="mailto:exemplo@exemplo.com">exemplo@exemplo.com</a></p>
-            </div>
-            <div class="footer-column3">
-                <h3>Redes Sociais</h3>
+                <a href="#!" class="text-body">Esqueceu sua senha?</a>
+              </div>
 
-                <div>
-                    <a class="instagram" href="#"><img width="60" height="60" src="https://img.icons8.com/cute-clipart/64/instagram-new.png" alt="instagram-new"/></a>
-                    <a class="linkedin" href="#"><img width="58" height="58" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/></a>
-                </div>
-            </div>
+              <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem">
+                  Login
+                </button>
+              </div>
+
+            </form>
+          </div>
         </div>
-        <div class="footer-copyright">
-            <p>&copy; 2024 Site Miriã Mauge. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-    <!-- fim footer -->
+      </div>
+    </section>
 
-    <!-- scripts -->
-
-    <script src="assets/js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/2eeb56781b.js" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- fim -->
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  </body>
 </html>
