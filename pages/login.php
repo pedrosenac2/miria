@@ -1,9 +1,36 @@
+<?php
+session_start();
+$erro = '';
+$email = '';
+
+// verifica se existe a variavel de sessao erro
+if(isset($_SESSION['erro'])){
+    // se existir, atribui o valor em uma variavel local chamada $erro
+    $erro = $_SESSION['erro'];
+}
+
+// verifica se existe a variavel de sessao email
+if(isset($_SESSION['email'])){
+    // se existir, caso o usuario ja tenha tentado fazer o login, captura e armazena em uma variavel local $email para trazer o campo do form preenchido
+    $email = $_SESSION['email'];
+}
+
+// destroi a sessao
+session_destroy();
+// zera as variaveis de sessao
+session_unset();
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="../assets/css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	
 	<title>Login-Miriã Mauge</title>
 </head>
@@ -26,7 +53,18 @@
     <!-- Começo do Conteúdo da Pagina -->
         <div id="container-login">
             <div id="container-grid">
-                <form id="loginForm">
+                <form action="../config/valida-login.php" method="post" id="loginForm">
+                <?php
+                    if($erro != ''){
+                ?>
+                                            
+                <div class="alert alert-warning" role="alert">                              
+                    <?php echo $erro;?>
+                </div>
+
+                <?php 
+                    }
+                ?>
                     <center><h2>Login</h2></center>
                     <label for="loginEmail">Email:</label>
                     <input type="email" id="loginEmail" name="loginEmail" required>
