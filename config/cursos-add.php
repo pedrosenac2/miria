@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $imagem_data = file_get_contents($imagem_temp);
         
         // Prepara a consulta SQL
-        $sql = "INSERT INTO tb_ebooks (nome, descricao, imagem) VALUES (:nome, :descricao, :imagem)";
+        $sql = "INSERT INTO tb_curso (nome, descricao, imagem) VALUES (:nome, :descricao, :imagem)";
         $stmt = $conn->prepare($sql); 
         
         // Associa os parâmetros
