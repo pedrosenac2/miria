@@ -1,3 +1,26 @@
+<?php
+session_start();
+$erro = '';
+$nome = '';
+$email = '';
+
+
+if(isset($_SESSION['erro'])){
+    $erro = $_SESSION['erro'];
+}
+
+if(isset($_SESSION['nome'])){
+  $nome = $_SESSION['nome'];
+}
+
+if(isset($_SESSION['email'])){
+    $email = $_SESSION['email'];
+}
+
+session_destroy();
+session_unset();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -13,6 +36,17 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <form action="../config/cadastro-usuario.php" method="post">
+              <?php
+                      if($erro != ''){
+                  ?>
+                                              
+                  <div class="alert alert-warning" role="alert">                              
+                      <?php echo $erro;?>
+                  </div>
+
+                  <?php 
+                      }
+                ?>
 
               <div class="divider d-flex align-items-center my-4">
                 <h1 class="text-center fw-bold mx-3 mb-0">Cadastrar</h1>
@@ -22,7 +56,7 @@
                 <label class="form-label" for="nome">
                         Nome
                 </label>
-                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Seu nome" required/>
+                <input type="text" name="nome" id="nome" value="<?php echo $nome;?>" class="form-control form-control-lg" placeholder="Seu nome" required/>
               </div>
 
               <!-- Email input -->
@@ -30,7 +64,7 @@
                 <label class="form-label" for="loginEmail">
                         E-mail
                 </label>
-                <input type="email" name="loginEmail" id="loginEmail" class="form-control form-control-lg" placeholder="Insira um endereço de email" required/>
+                <input type="email" name="loginEmail" id="loginEmail" value="<?php echo $email;?>"   class="form-control form-control-lg" placeholder="Insira um endereço de email" required/>
               </div>
 
               <!-- Password input -->

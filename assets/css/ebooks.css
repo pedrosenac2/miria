@@ -275,7 +275,7 @@
     background-color: #800000;
     vertical-align: middle;
     margin-right: 14px;
-    width: 51px;
+    width: 35px;
     height: 8px;
 }
 
@@ -284,7 +284,7 @@
     display: inline-block;
     background-color: #800000;
     vertical-align: middle;
-    width: 51px;
+    width: 35px;
     height: 8px;
 }
 
@@ -369,7 +369,7 @@
 }
 
 .search{
-    width: 820px;
+    /* width: 820px; */
     border: 1px solid #000;
     border-radius: 10px;
     margin-bottom: 65px;
