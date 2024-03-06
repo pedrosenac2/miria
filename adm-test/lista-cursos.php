@@ -17,7 +17,7 @@
     <header>
         <nav>
             <a href="admin-testc.html">Adicionar</a>
-            <a href="lista-cursos.php">Lista</a>
+            <a href="lista-curso.php">Lista</a>
         </nav>
     </header>
 
@@ -28,7 +28,6 @@
                 <tr>
                     <th>Nome</th>
                     <th>Descrição</th>
-                    <th>imagem</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -38,10 +37,10 @@
                 <tr>
                     <td><?php echo htmlspecialchars($row['nome']); ?></td>
                     <td><?php echo htmlspecialchars($row['descricao']); ?></td>
-                    <td><?php echo htmlspecialchars($row['imagem']); ?></td>
+                
                     <td>
-                        <a href="../config/ebooks-del.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Excluir</a>
-                        <a href="editar.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="../config/curso-del.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Excluir</a>
+                        <a href="../config/curso-edit.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
                     </td>
                 </tr>
 
