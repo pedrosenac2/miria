@@ -347,8 +347,8 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 										<h5>Miriã Maugé</h5>
 										<p>ADM</p>
 									</div>
-									<a href="user-profile.html"><i class="icon-user1"></i>Perfil</a>
-									<a href="account-settings.html"><i class="icon-settings1"></i>Configurações</a>
+									<a href="#"><i class="icon-user1"></i>Perfil</a>
+									<a href="#"><i class="icon-settings1"></i>Configurações</a>
 									<a href="login.html"><i class="icon-log-out1"></i>Sair</a>
 								</div>
 							</div>
