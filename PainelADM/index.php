@@ -1,16 +1,27 @@
 <?php
-include '../config/controle-sessao.php';
+
 include '../config/conexao.php';
 
-$sql_cursos = "SELECT tb_curso.nome, tb_curso.descricao, tb_curso.id_img, tb_img.img 
+$sql_cursos = "SELECT tb_curso.id ,tb_curso.nome, tb_curso.descricao, tb_curso.id_img, tb_img.img 
 FROM tb_curso 
 INNER JOIN tb_img 
 ON tb_curso.id_img = tb_img.id;";
 $stmt_cursos = $conn->query($sql_cursos);
+$dados_cursos = $stmt_cursos->fetchAll(PDO::FETCH_ASSOC);
+
+
+$sql_ebooks = "SELECT tb_ebooks.id, tb_ebooks.nome, tb_ebooks.descricao, tb_ebooks.imagem FROM tb_ebooks";
+$stmt_ebooks = $conn->query($sql_ebooks);
+$dados_ebooks = $stmt_ebooks->fetchAll(PDO::FETCH_ASSOC);
+
 
 $sql_ebooks = "SELECT * FROM tb_ebooks";
 $stmt_ebooks = $conn->query($sql_ebooks);
 
+// $row = $stmt_cursos->fetch(PDO::FETCH_ASSOC);
+// echo '<pre>';
+// var_dump($row);
+// exit();
 ?>
 
 
@@ -95,7 +106,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 						data-original-title="X">
 						<i class="icon-twitter1"></i>
 					</a>
-					<a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
+					<a href="login.html" class="red" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Sair">
 						<i class="icon-power1"></i>
 					</a>
@@ -123,7 +134,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 										<a href="cadastroCurso.html">Cadastrar Curso</a>
 									</li>
 									<li>
-										<a href="cadastroEbook.php">Cadastrar E-book</a>
+										<a href="cadastroEbook.html">Cadastrar E-book</a>
 									</li>
 									<li>
 										<a href="#">Cadastrar Usuarios</a>
@@ -363,15 +374,18 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 				</div>
 
 				<!-- Card Curso -->
-				<div class="titulo">
-					<h1 class="text-start" style="margin-left: 34px;">Cursos cadastrados</h1>
-					<div class="row" style="margin-top: 50px;">
-						<?php
-						if ($row = $stmt_cursos->fetch(PDO::FETCH_ASSOC)):
-							do { ?>
+				<center>
+					<div class="titulo">
+						<h1 class="text-start">Cursos cadastrados</h1>
+						<div class="row" style="margin-top: 50px;">
+							<?php
+							foreach ($dados_cursos as $row) {
+								?>
 								<div class="col-md-6">
 									<div class="card" style="width: 38rem;">
-										<?php echo ' <img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['img']) . '">'; ?>
+										<?php
+										echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['img']) . '" style="width:100%; height:100%;">';
+										?>
 										<div class="card-body">
 											<h5 class="card-title">
 												<?= $row['nome'] ?>
@@ -379,27 +393,70 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 											<p class="card-text">
 												<?= $row['descricao'] ?>
 											</p>
-											<a href="#" class="btn btn-primary">Ver Mais</a>
+											<button class="btn btn-primary" data-toggle="modal"
+												data-target="#meuModal<?= $row['id']; ?>">Visualizar</button>
 										</div>
 									</div>
 								</div>
-							<?php } while ($row = $stmt_cursos->fetch(PDO::FETCH_ASSOC));
-						else: ?>
-							<p>Não há cursos cadastrados.</p>
-						<?php endif; ?>
+							<?php } ?>
+						</div>
 					</div>
-				</div>
 
-				<!-- Card Curso -->
-				<div class="titulo">
-					<h1 class="text-start" style="margin-left: 34px;">E-books cadastrados</h1>
-					<div class="row" style="margin-top: 50px;">
-						<?php
-						if ($row = $stmt_ebooks->fetch(PDO::FETCH_ASSOC)):
-							do { ?>
-								<div class="col-md-4">
-									<div class="card" style="width: 18rem;">
-										<?php echo ' <img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '">'; ?>
+					<!-- Modal do Curso-->
+					<?php
+					foreach ($dados_cursos as $row) {
+						?>
+						<div class="modal fade" id="meuModal<?= $row['id']; ?>" tabindex="-1" role="dialog"
+							aria-labelledby="meuModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="meuModalLabel">Área de Ações</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="row">
+											<div class="col-md-6">
+												<?php
+												echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['img']) . '"style="width:100%; height:100%;">';
+												?>
+											</div>
+											<div class="col-md-6">
+												<h2>
+													<?= $row['nome'] ?>
+												</h2>
+												<p>
+													<?= $row['descricao'] ?>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<a href="../config/curso-edit.php?id=<?php echo $row['id'] ?>"
+											class="btn btn-primary btn-sm">Editar</a>
+										<button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+										<a href="../config/curso-del.php?id=<?php echo $row['id'] ?>"
+											class="btn btn-danger btn-sm">Excluir</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					<?php } ?>
+
+					<!-- Card Ebook -->
+					<div class="titulo">
+						<h1 class="text-start">Ebooks cadastrados</h1>
+						<div class="row" style="margin-top: 50px;">
+							<?php
+							foreach ($dados_ebooks as $row) {
+								?>
+								<div class="col-md-6">
+									<div class="card" style="width: 38rem;">
+										<?php
+										echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '"style="width:100%; height:100%;">';
+										?>
 										<div class="card-body">
 											<h5 class="card-title">
 												<?= $row['nome'] ?>
@@ -407,16 +464,58 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 											<p class="card-text">
 												<?= $row['descricao'] ?>
 											</p>
-											<a href="#" class="btn btn-primary">Ver Mais</a>
+											<button class="btn btn-primary" data-toggle="modal"
+												data-target="#meuModalEbook<?= $row['id']; ?>">Visualizar</button>
 										</div>
 									</div>
 								</div>
-							<?php } while ($row = $stmt_ebooks->fetch(PDO::FETCH_ASSOC));
-						else: ?>
-							<p>Não há cursos cadastrados.</p>
-						<?php endif; ?>
+							<?php } ?>
+						</div>
 					</div>
-				</div>
+
+					<!-- Modal do Ebook-->
+					<?php
+					foreach ($dados_ebooks as $row) {
+						?>
+						<div class="modal fade" id="meuModalEbook<?= $row['id']; ?>" tabindex="-1" role="dialog"
+							aria-labelledby="meuModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="meuModalLabel">Área de Ações</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="row">
+											<div class="col-md-6">
+												<?php
+												echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '" style="width:100%; height:100%;">';
+												?>
+											</div>
+											<div class="col-md-6">
+												<h2>
+													<?= $row['nome'] ?>
+												</h2>
+												<p>
+													<?= $row['descricao'] ?>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<a href="../config/ebooks-edit.php?id=<?php echo $row['id'] ?>"
+											class="btn btn-primary btn-sm">Editar</a>
+										<button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+										<a href="../config/ebooks-del.php?id=<?php echo $row['id'] ?>"
+											class="btn btn-danger btn-sm">Excluir</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					<?php } ?>
+				</center>
 			</div>
 			<!-- Row end -->
 
