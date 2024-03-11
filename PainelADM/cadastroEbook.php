@@ -1,3 +1,9 @@
+<?php
+	include "../config/controle-sessao.php";
+?>
+
+
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -74,9 +80,6 @@
 </head>
 
 <body>
-		<?php
-		include "../config/controle-sessao.php";
-		?>
 	<!-- Loading starts -->
 	<div id="loading-wrapper">
 		<div class="spinner-border" role="status">
@@ -115,7 +118,7 @@
 						data-original-title="X">
 						<i class="icon-twitter1"></i>
 					</a>
-					<a href="login.html" class="red" data-toggle="tooltip" data-placement="top" title=""
+					<a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Sair">
 						<i class="icon-power1"></i>
 					</a>
