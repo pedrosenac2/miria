@@ -137,7 +137,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 										<a href="cadastroEbook.html">Cadastrar E-book</a>
 									</li>
 									<li>
-										<a href="#">Cadastrar Usuarios</a>
+										<a href="cadastroUsuario.html">Cadastrar Usuarios</a>
 									</li>
 									<!-- <li>
 											<a href="dashboard4.html">Dashboard 4</a>
