@@ -106,7 +106,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 						data-original-title="X">
 						<i class="icon-twitter1"></i>
 					</a>
-					<a href="login.html" class="red" data-toggle="tooltip" data-placement="top" title=""
+					<a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Sair">
 						<i class="icon-power1"></i>
 					</a>
@@ -131,10 +131,10 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 										<a href="index.php" class="current-page">HOME</a>
 									</li>
 									<li>
-										<a href="cadastroCurso.html">Cadastrar Curso</a>
+										<a href="cadastroCurso.php">Cadastrar Curso</a>
 									</li>
 									<li>
-										<a href="cadastroEbook.html">Cadastrar E-book</a>
+										<a href="cadastroEbook.php">Cadastrar E-book</a>
 									</li>
 									<li>
 										<a href="cadastroUsuario.html">Cadastrar Usuarios</a>
