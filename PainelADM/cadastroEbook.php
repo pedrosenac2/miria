@@ -74,7 +74,9 @@
 </head>
 
 <body>
-
+		<?php
+		include "../config/controle-sessao.php";
+		?>
 	<!-- Loading starts -->
 	<div id="loading-wrapper">
 		<div class="spinner-border" role="status">

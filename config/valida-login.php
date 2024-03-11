@@ -42,8 +42,11 @@ try{
 
     // valida se a variavel $resultado e nula ou nao
     if($resultado !=null){
+        // cria uma variavel de sessão para controle de sessão
+        // id_sistema é um codigo gerado aleatoriamente unico do sistema, pode ser gerado como quiser de forma que seja unico
+        $_SESSION['id_sistema'] = 'sislogin2024*';
         // caso nao for nula, redireciona para o admin
-        header("location: ../adm-test/admin-test.html");
+        header("location: ../PainelADM/index.php");
     } else{
         // define na variavel de sessao erro a mensagem
         $_SESSION['erro'] = "Usuário ou senha incorretos!";

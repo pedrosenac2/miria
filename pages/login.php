@@ -3,22 +3,30 @@ session_start();
 $erro = '';
 $email = '';
 
-// verifica se existe a variavel de sessao erro
-if(isset($_SESSION['erro'])){
-    // se existir, atribui o valor em uma variavel local chamada $erro
-    $erro = $_SESSION['erro'];
-}
 
-// verifica se existe a variavel de sessao email
-if(isset($_SESSION['email'])){
-    // se existir, caso o usuario ja tenha tentado fazer o login, captura e armazena em uma variavel local $email para trazer o campo do form preenchido
-    $email = $_SESSION['email'];
-}
+if(isset($_SESSION['id_sistema'])){
+  if($_SESSION['id_sistema'] == 'sislogin2024*'){
+    header('Location: ../PainelADM/index.php');
+  }
+}else{
 
-// destroi a sessao
-session_destroy();
-// zera as variaveis de sessao
-session_unset();
+  // verifica se existe a variavel de sessao erro
+  if(isset($_SESSION['erro'])){
+      // se existir, atribui o valor em uma variavel local chamada $erro
+      $erro = $_SESSION['erro'];
+  }
+
+  // verifica se existe a variavel de sessao email
+  if(isset($_SESSION['email'])){
+      // se existir, caso o usuario ja tenha tentado fazer o login, captura e armazena em uma variavel local $email para trazer o campo do form preenchido
+      $email = $_SESSION['email'];
+  }
+
+  // destroi a sessao
+  session_destroy();
+  // zera as variaveis de sessao
+  session_unset();
+}
 ?>
 
 <!DOCTYPE html>
