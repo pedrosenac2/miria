@@ -1,3 +1,7 @@
+<?php
+	include "../config/controle-sessao.php";
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -113,7 +117,7 @@
 						data-original-title="X">
 						<i class="icon-twitter1"></i>
 					</a>
-					<a href="login.html" class="red" data-toggle="tooltip" data-placement="top" title=""
+					<a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Sair">
 						<i class="icon-power1"></i>
 					</a>
@@ -138,10 +142,10 @@
 										<a href="index.php">HOME</a>
 									</li>
 									<li>
-										<a href="cadastroCurso.html" class="current-page">Cadastrar Curso</a>
+										<a href="cadastroCurso.php" class="current-page">Cadastrar Curso</a>
 									</li>
 									<li>
-										<a href="cadastroEbook.html">Cadastrar E-book</a>
+										<a href="cadastroEbook.php">Cadastrar E-book</a>
 									</li>
 									<li>
 										<a href="#">Cadastrar Usuarios</a>
