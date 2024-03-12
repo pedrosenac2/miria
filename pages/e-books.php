@@ -27,12 +27,8 @@
     include('../includes/header.php');
     ?>
     <div class="row">
-        <div class="col-12">
-            <div class="banner-title">
-                <div class="title-container">
-                    <h1 class="title">E-Books</h1>
-                </div>
-            </div>
+        <div class="col-md-12">
+            <h1 class="text-center title">E-Books</h1>
         </div>
     </div>
     <div class="row">
@@ -53,9 +49,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="title-container">
-                    <h2 class="subtitle">Todos os e-books</h2>
-                </div>
+                <h2 class="text-center subtitle">Todos os e-books</h2>
             </div>
         </div>
 
