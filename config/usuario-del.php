@@ -1,17 +1,27 @@
 <?php
-    if(isset($_GET['id'])){
-        $id = $_GET['id'];
+try{
 
-        include "conexao.php";
+    if(empty($_GET['id'])){
+        throw new Exception("Selecione um registro válido para ser deletado!");
+    }
+  
+    $id = $_GET['id'];
 
-        $sql = "DELETE FROM tb_login WHERE id = :id";
+    include "conexao.php";
 
-        $stmt = $conn->prepare($sql);
+    $sql = "DELETE FROM tb_login WHERE id = :id";
 
-        $stmt->bindParam(':id', $id);
+    $stmt = $conn->prepare($sql);
 
-        $stmt->execute();
-        header("Location: usuarios.php");
-        exit();
+    $stmt->bindParam(':id', $id);
+
+    $stmt->execute();
+    header("Location: usuarios.php");
+    exit();
+
+}
+catch(Exception $e){
+    echo $e->getMessage();
+
 }
 ?>

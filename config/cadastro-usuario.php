@@ -1,11 +1,17 @@
 <?php
 include "conexao.php";
+try{
+    if ($_SERVER["REQUEST_METHOD"] != "POST") {
+        throw new Exception("operação invalida!");
+    } 
+    if(!isset($_POST["nome"]) || !isset($_POST["loginemail"]) || !isset($_POST["loginSenha"]) || !isset($_POST["confirmaSenha"])) {
+        throw new Exception("Algum campo não foi preenchido");
+    }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST['nome'];
-    $email = $_POST['loginEmail'];
-    $senha = $_POST['loginSenha'];
-    $confirmaSenha = $_POST['confirmaSenha'];
+        $nome = $_POST['nome'];
+        $email = $_POST['loginEmail'];
+        $senha = $_POST['loginSenha'];
+        $confirmaSenha = $_POST['confirmaSenha'];
 
         session_start();
 
@@ -32,10 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: ../pages/login.php");
         }
-
-} else{
-echo "Acesso Inválido";
+    
+}catch(Exception $e){
+    echo $e->getMessage();
 }
-
-
 ?>

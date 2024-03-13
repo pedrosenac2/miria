@@ -1,29 +1,39 @@
 <?php
-    if(isset($_GET['id'])){
-        $id = $_GET['id'];
 
-        include "conexao.php";
+try{
+    
+    if(empty($_GET['id'])){
+      throw new Exception("Selecione um registro válido para ser editado!");
+    }
+    
+    $id = $_GET['id'];
 
-        $sql = "SELECT * FROM tb_login WHERE id = :id";
-        $stmt = $conn->prepare($sql);
+    include "conexao.php";
 
-        $stmt->bindParam(':id', $id);
+    $sql = "SELECT * FROM tb_login WHERE id = :id";
+    $stmt = $conn->prepare($sql);
 
-        $stmt->execute();
+    $stmt->bindParam(':id', $id);
 
-        if($stmt->rowCount() > 0){
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->execute();
 
-            session_start();
-            $erro = '';
+    if($stmt->rowCount() <= 0){
+      throw new Exception("Não foi encontrado registro!");
+    }
+  
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    session_start();
+    $erro = '';
 
 
-            if(isset($_SESSION['erro'])){
-                $erro = $_SESSION['erro'];
-            }
+    if(isset($_SESSION['erro'])){
+        $erro = $_SESSION['erro'];
+    }
 
-            session_destroy();
-            session_unset();
+    session_destroy();
+    session_unset();   
+
 
 ?>
 
@@ -110,11 +120,8 @@
 
 <?php
 
- }else{
-    header('Location: usuarios.php');
- }
-}else{
-    header('Location: usuarios.php');
+} catch(Exception $e){
+  $e->getMessage();
+  header('Location: usuarios.php');
 }
-
 ?>
