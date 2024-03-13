@@ -268,14 +268,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 70px;
     letter-spacing: 20.8px; 
-}
-
-@media (max-width: 768px) {
-    .title {
-      font-size: 50px; /* Reduz o tamanho da fonte em telas menores */
-    }
-  }
-  
+} 
 
 .title::before{
     content: "";
@@ -296,6 +289,52 @@
     height: 8px;
 }
 
+@media (max-width: 768px) {
+    .title {
+      font-size: 50px;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+    .title::before{
+      width: 25px;
+      height: 5px;
+    }
+    .title::after{
+      width: 25px;
+      height: 5px;
+    }
+  }
+@media (max-width: 480px) {
+    .title {
+      font-size: 40px;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+    .title::before{
+        width: 20px;
+        height: 5px;
+      }
+      .title::after{
+        width: 20px;
+        height: 5px;
+      }
+  }
+@media (max-width: 350px) {
+    .title {
+      font-size: 24px;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+    .title::before{
+        width: 14px;
+        height: 5px;
+      }
+      .title::after{
+        width: 14px;
+        height: 5px;
+      }
+  }
+
 .subtitle{
     color: #000;
     font-family: 'Roboto', sans-serif;
@@ -314,6 +353,37 @@
     height: 2px;
 }
 
+@media (max-width: 768px) {
+    .subtitle {
+      font-size: 25px;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+    .subtitle::after{
+      width: 270px;
+    }
+  }
+@media (max-width: 480px) {
+    .subtitle {
+      font-size: 20px;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
+    .subtitle::after{
+      width: 255px;
+    }
+  }
+@media (max-width: 350px) {
+    .subtitle {
+        font-size :15px;
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+    .subtitle::after{
+        width: 200px;
+    }
+}
+
 .container{
     width: 100%;
 }
@@ -327,6 +397,7 @@
 .ordenar-por{
     display: flex;
     justify-content: end;
+    margin-bottom: 30px;
 }
 
 .ordenar-por label{
@@ -383,19 +454,31 @@
     margin-bottom: 65px;
 }
 
-#searchbar{
+.searchbar{
     /* width: 95%; */
-    padding: 6px 14px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    border-radius: 10px ;
+    padding: 6px 14px !important;
+    font-size: 16px !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 10px !important ;
+}
+
+.searchbar:focus{
+    border-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .searchbutton{
     border: none;
     background: none;
 }
+
+/* @media (max-width: 768px){
+    .search{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+} */
 
 .veja-mais{
     border: 1px solid #000;
