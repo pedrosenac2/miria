@@ -263,11 +263,19 @@
 
 .title{
     margin-top: 18px;
+    margin-bottom: 18px;
     color: #000;
     font-family: 'Roboto', sans-serif;
     font-size: 70px;
     letter-spacing: 20.8px; 
 }
+
+@media (max-width: 768px) {
+    .title {
+      font-size: 50px; /* Reduz o tamanho da fonte em telas menores */
+    }
+  }
+  
 
 .title::before{
     content: "";
