@@ -20,10 +20,6 @@
 <body>
 
     <?php
-    // include '../includes/botaoFlutuante.php'
-    ?>
-
-    <?php
     include('../includes/header.php');
     ?>
     <div class="row">

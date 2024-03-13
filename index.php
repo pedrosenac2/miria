@@ -28,13 +28,6 @@
 
 <body class="p-0 m-0 border-0 bd-example m-0 border-0">
 
-    <!-- Botão Flutuante -->
-
-    <?php
-        include 'includes/botaoFlutuante.php'
-    ?>
-    <!-- Fim Botão -->
-
     <?php
     include_once 'includes/header.php';
     ?>

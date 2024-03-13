@@ -12,7 +12,6 @@
 
 <body>
     <?php
-    // include '../includes/botaoFlutuante.php';
     include('../includes/header.php');
     include('../config/conexao.php');
 
