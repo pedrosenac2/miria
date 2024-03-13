@@ -22,27 +22,39 @@
     <?php
     include('../includes/header.php');
     ?>
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center title">E-Books</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center title">E-Books</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-3"></div> 
 
-        <div class="col-6">
-            <div class="search">
-                <form action="" method="post">
-                    <input type="text" name="searchbar" id="searchbar" placeholder="Pesquise por um e-book">
-                    <button class="searchbutton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="row justify-content-center">
+            <div class="col-md-6 search">
+                <form class="d-flex">
+                    <input class="form-control me-2 searchbar" id="searchbar" name="searchbar" type="search" placeholder="Pesquise por um e-book" aria-label="Pesquisar">
+                    <button class="searchbutton" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </form>
             </div>
         </div>
 
-        <div class="col-3"></div>
-    </div>
+        <!-- <div class="row">
+            <div class="col-3"></div> 
 
-    <div class="container">
+            <div class="col-6">
+                <div class="search">
+                    <form action="" method="post">
+                        <input type="text" name="searchbar" id="searchbar" placeholder="Pesquise por um e-book">
+                        <button class="searchbutton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-3"></div>
+        </div> -->
+
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="text-center subtitle">Todos os e-books</h2>
@@ -50,14 +62,7 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
-                <div class="ebook-filter">
-                    <div>
-                        <label for="">Filtre por: </label>
-                    </div>
-                </div>
-            </div>
-
+            <div class="col-sm-6"></div>
             <div class="col-sm-6">
                 <div class="ordenar-por">
                     <label for="">Ordenar por: </label>
