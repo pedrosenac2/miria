@@ -55,7 +55,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
     <nav class="navbar navbar-expand-lg">
         <div class="container d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center">
-                <a class="navbar-brand fs-3" href="index.html">
+                <a class="navbar-brand fs-3" href="../index.php">
                     <strong style="font-size: 40px;"> <span style="color: dark; font-weight: lighter;">Miriã
                         </span><span style="color: maroon;"> Maugé </span></strong>
                 </a>
