@@ -1,11 +1,13 @@
 <?php
 
+include '../config/controle-sessao.php';
+
 include '../config/conexao.php';
 
 $sql_cursos = "SELECT tb_curso.id ,tb_curso.nome, tb_curso.descricao, tb_curso.id_img, tb_img.img 
 FROM tb_curso 
 INNER JOIN tb_img 
-ON tb_curso.id_img = tb_img.id;";
+ON tb_curso.id_img = tb_img.id";
 $stmt_cursos = $conn->query($sql_cursos);
 $dados_cursos = $stmt_cursos->fetchAll(PDO::FETCH_ASSOC);
 
@@ -18,10 +20,6 @@ $dados_ebooks = $stmt_ebooks->fetchAll(PDO::FETCH_ASSOC);
 $sql_ebooks = "SELECT * FROM tb_ebooks";
 $stmt_ebooks = $conn->query($sql_ebooks);
 
-// $row = $stmt_cursos->fetch(PDO::FETCH_ASSOC);
-// echo '<pre>';
-// var_dump($row);
-// exit();
 ?>
 
 
@@ -98,8 +96,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 				</div>
 				<h6 class="profile-name">Miriã Maugé</h6>
 				<div class="profile-actions">
-					<a href="account-settings.html" data-toggle="tooltip" data-placement="top" title=""
-						data-original-title="Configurações">
+					<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
 						<i class="icon-settings1"></i>
 					</a>
 					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title=""
@@ -137,11 +134,14 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 										<a href="cadastroEbook.php">Cadastrar E-book</a>
 									</li>
 									<li>
-										<a href="cadastroUsuario.html">Cadastrar Usuarios</a>
+										<a href="cadastroUsuario.php">Cadastrar Usuarios</a>
 									</li>
 									<!-- <li>
-											<a href="dashboard4.html">Dashboard 4</a>
-										</li> -->
+										<a href="listaUsuario.php">Listar Usuario</a>
+									</li> -->
+									<li>
+										<a href="../index.php">Pagina Inicial</a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -174,9 +174,10 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 									<li>
 										<a href="#">Esqueci a senha</a>
 									</li>
-									<!-- <li>
-											<a href="coming-soon.html">Coming Soon</a>
-										</li> -->
+									<li>
+										<a href="../config/usuarios.php">Listar Usuarios do Sistema</a>
+									</li>
+
 								</ul>
 							</div>
 						</li>
@@ -349,7 +350,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 									</div>
 									<a href="#"><i class="icon-user1"></i>Perfil</a>
 									<a href="#"><i class="icon-settings1"></i>Configurações</a>
-									<a href="login.html"><i class="icon-log-out1"></i>Sair</a>
+									<a href="../config/logout.php"><i class="icon-log-out1"></i>Sair</a>
 								</div>
 							</div>
 						</li>
@@ -384,7 +385,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 								<div class="col-md-6">
 									<div class="card" style="width: 38rem;">
 										<?php
-										echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['img']) . '" style="width:100%; height:100%;">';
+										echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['img']) . '" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:15px;">';
 										?>
 										<div class="card-body">
 											<h5 class="card-title">
@@ -401,6 +402,8 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 							<?php } ?>
 						</div>
 					</div>
+
+
 
 					<!-- Modal do Curso-->
 					<?php

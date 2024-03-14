@@ -1,5 +1,5 @@
-<?php
-	include "../config/controle-sessao.php";
+<?php 
+    include '../config/controle-sessao.php';
 ?>
 
 <!doctype html>
@@ -95,8 +95,11 @@
 
 			<!-- Sidebar brand start  -->
 			<div class="sidebar-brand">
-				<a href="index.html" class="logo">
-					<p>Olá</p>
+				<!-- <a href="index.html" class="logo">
+						<img src="img/logo.png" alt="Logo" />
+					</a> -->
+				<a href="index.php" class="logo">
+					<img src="img/logo.svg" alt="Bootstrap Gallery">
 				</a>
 			</div>
 			<!-- Sidebar brand end  -->
@@ -109,7 +112,7 @@
 				</div>
 				<h6 class="profile-name">Miriã Maugé</h6>
 				<div class="profile-actions">
-					<a href="account-settings.html" data-toggle="tooltip" data-placement="top" title=""
+					<a href="#" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Configurações">
 						<i class="icon-settings1"></i>
 					</a>
@@ -148,7 +151,7 @@
 										<a href="cadastroEbook.php">Cadastrar E-book</a>
 									</li>
 									<li>
-										<a href="#">Cadastrar Usuarios</a>
+										<a href="cadastroUsuario.php">Cadastrar Usuarios</a>
 									</li>
 									<!-- <li>
 											<a href="dashboard4.html">Dashboard 4</a>
@@ -178,23 +181,17 @@
 							<div class="sidebar-submenu">
 								<ul>
 									<li>
-										<a href="login.html">Login</a>
+										<a href="../pages/login.php">Login</a>
 									</li>
 									<li>
-										<a href="signup.html">Sair</a>
+										<a href="../config/logout.php">Sair</a>
 									</li>
 									<li>
-										<a href="forgot-pwd.html">Esqueci a senha</a>
+										<a href="#">Esqueci a senha</a>
 									</li>
-									<!-- <li>
-											<a href="error.html">404</a>
-										</li>
-										<li>
-											<a href="error2.html">505</a>
-										</li> -->
-									<!-- <li>
-											<a href="coming-soon.html">Coming Soon</a>
-										</li> -->
+									<li>
+										<a href="../config/usuarios.php">Listar Usuarios do Sistema</a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -368,9 +365,9 @@
 										<h5>Miriã Maugé</h5>
 										<p>ADM</p>
 									</div>
-									<a href="user-profile.html"><i class="icon-user1"></i>Perfil</a>
-									<a href="account-settings.html"><i class="icon-settings1"></i>Configurações</a>
-									<a href="login.html"><i class="icon-log-out1"></i>Sair</a>
+									<a href="#"><i class="icon-user1"></i>Perfil</a>
+									<a href="#"><i class="icon-settings1"></i>Configurações</a>
+									<a href="../config/logout.php"><i class="icon-log-out1"></i>Sair</a>
 								</div>
 							</div>
 						</li>

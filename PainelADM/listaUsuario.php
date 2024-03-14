@@ -1,5 +1,11 @@
-<?php 
-    include '../config/controle-sessao.php';
+<?php
+include '../config/controle-sessao.php';
+
+require "../config/conexao.php";
+
+$sql = "SELECT * FROM tb_login";
+$stmt = $conn->query($sql);
+
 ?>
 
 <!doctype html>
@@ -23,8 +29,8 @@
 
 
     <!-- *************
-			************ Common Css Files *************
-		************ -->
+            ************ Common Css Files *************
+        ************ -->
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Icomoon Font Icons css -->
@@ -35,8 +41,8 @@
     <link rel="stylesheet" href="css/chat.css">
 
     <!-- *************
-			************ Vendor Css Files *************
-		************ -->
+            ************ Vendor Css Files *************
+        ************ -->
 
     <style>
         .form-group {
@@ -73,6 +79,8 @@
         .form-group button[type="submit"]:hover {
             background-color: #45a049;
         }
+
+
     </style>
 
 </head>
@@ -96,8 +104,8 @@
             <!-- Sidebar brand start  -->
             <div class="sidebar-brand">
                 <!-- <a href="index.html" class="logo">
-						<img src="img/logo.png" alt="Logo" />
-					</a> -->
+                        <img src="img/logo.png" alt="Logo" />
+                    </a> -->
                 <a href="index.php" class="logo">
                     <img src="img/logo.svg" alt="Bootstrap Gallery">
                 </a>
@@ -382,29 +390,41 @@
                 </div>
 
                 <div class="titulo">
-                    <h1 class="text-start" style="margin-left: 34px;">Cadastre um Usuario</h1>
+                    <h1 class="text-start" style="margin-left: 34px;">Lista dos Usuarios</h1>
                     <div class="container">
-                        <form action="../config/cadastro-usuario.php" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="nome">Nome:</label>
-                                <input type="text" id="nome" name="nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="loginEmail">Email:</label>
-                                <textarea id="loginEmail" name="loginEmail" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="loginSenha">Senha:</label>
-                                <textarea id="loginSenha" name="loginSenha" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="confirmaSenha">Confirmar Senha:</label>
-                                <textarea id="confirmaSenha" name="confirmaSenha" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit">Enviar</button>
-                            </div>
-                        </form>
+                        <div class="container mt-5" style="font-size: 30px;">
+                            <table class="table text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>E-mail</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+
+                                        <tr>
+                                            <td>
+                                                <?php echo htmlspecialchars($row['nome']); ?>
+                                            </td>
+                                            <td>
+                                                <?php echo htmlspecialchars($row['email']); ?>
+                                            </td>
+
+                                            <td>
+                                                <a href="../config/usuario-del.php?id=<?php echo $row['id']; ?>"
+                                                    class="btn btn-danger btn-sm">Excluir</a>
+                                                <a href="../config/usuario-edit.php?id=<?php echo $row['id']; ?>"
+                                                    class="btn btn-warning btn-sm">Editar</a>
+                                            </td>
+                                        </tr>
+                                    <?php endwhile; ?>
+                                </tbody>
+
+                            </table>
+
+                        </div>
                     </div>
                 </div>
             </div>
