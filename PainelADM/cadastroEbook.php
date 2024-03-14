@@ -153,9 +153,9 @@
 									<li>
 										<a href="cadastroUsuario.php">Cadastrar Usuarios</a>
 									</li>
-									<!-- <li>
-											<a href="dashboard4.html">Dashboard 4</a>
-										</li> -->
+									<li>
+										<a href="../index.php">Pagina Inicial</a>
+									</li>
 								</ul>
 							</div>
 						</li>

@@ -152,6 +152,9 @@
                                     <li>
                                         <a href="cadastroUsuario.php" class="current-page">Cadastrar Usuarios</a>
                                     </li>
+                                    <li>
+										<a href="../index.php">Pagina Inicial</a>
+									</li>
                                 </ul>
                             </div>
                         </li>
