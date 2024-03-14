@@ -1,6 +1,6 @@
 <?php
     require "../config/conexao.php";
-
+    include "controle-sessao.php";
     $sql  ="SELECT * FROM tb_login";
     $stmt = $conn->query($sql); 
 ?>
