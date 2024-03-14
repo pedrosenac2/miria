@@ -1,122 +1,15 @@
 <?php
-    $ebooks = [
-        // Array multivalorado = chave e valor
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ], 
-        [
-            "titulo" => "ebook1",
-            "descricao" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "imagem" => "https://herospark.com/blog/wp-content/uploads/sites/6/2020/06/Como-fazer-um-ebook-no-canva-1-1200x800.png"
-        ]
-    ];
+    $ebooks = [];
+
+    include "../config/conexao.php";
+
+    $sql = "SELECT tb_ebooks.id ,tb_ebooks.nome, tb_ebooks.descricao, tb_ebooks.imagem FROM tb_ebooks";
+    $resultado = $conn->query($sql);
+    if ($resultado) {
+        $ebooks = $resultado->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        echo "Erro na consulta: " . $conn->errorInfo();
+    }
 ?>
 
 
@@ -203,10 +96,12 @@
                 <a class="link-curso" href="#">
                     <div class="curso">
                         <div class="img-curso">
-                            <img width="250" src="<?php echo $ebook["imagem"] ?>" alt="">
+                            <?php
+                                echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; height:100%; object-fit:cover; margin-bottom:15px;">';
+                            ?>
                         </div>
                         <div class="txt-curso">
-                            <h3 class="nome-curso"><?php echo $ebook["titulo"] ?></h3>
+                            <h3 class="nome-curso"><?php echo $ebook["nome"] ?></h3>
                             <p><?php echo $ebook["descricao"] ?></p>
                         </div>
                     </div>
