@@ -30,7 +30,7 @@
     }
     ?>
 
-    <?php 
+    <?php  
     include('../includes/header.php');
     ?>
 
@@ -48,8 +48,27 @@
     </div>
 
     <div class="container">
-        <div class="title-container">
-            <h2 class="subtitle">Os melhores Cursos para você.</h2>
+        <div class="row">
+            <div class="col-md-16">
+                <h1 class="text-center title">Cursos</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 search">
+                <form class="d-flex">
+                    <input class="form-control me-2 searchbar" id="searchbar" name="searchbar" type="search" placeholder="Pesquise por curso" aria-label="Pesquisar">
+                    <button class="searchbutton" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center subtitle">Os melhores Cursos para você.</h2>
+            </div>
         </div>
 
         <div class="container-curso">
