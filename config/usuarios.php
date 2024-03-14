@@ -1,6 +1,6 @@
 <?php
     require "../config/conexao.php";
-    include "controle-sessao.php";
+
     $sql  ="SELECT * FROM tb_login";
     $stmt = $conn->query($sql); 
 ?>
@@ -16,13 +16,13 @@
 <body>
     <header>
         <nav>
-            <a href="admin-testc.html">Adicionar</a>
-            <a href="lista-curso.php">Lista</a>
+            <a href="../PainelADM/cadastroUsuario.php">Adicionar</a>
+            <a href="../PainelADM/index.php">voltar</a>
         </nav>
     </header>
 
     <div class="container mt-5">
-        <h1>Lista de Ebooks</h1>
+        <h1>Lista dos Usuarios</h1>
         <table class="table text-center">
             <thead>
                 <tr>

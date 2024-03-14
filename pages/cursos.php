@@ -13,7 +13,6 @@
 <body>
     <?php
     // include '../includes/botaoFlutuante.php';
-    include('../includes/header.php');
     include('../config/conexao.php');
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -38,6 +37,10 @@
     } else {
         echo "Erro na consulta: " . $conn->errorInfo();
     }
+    ?>
+
+    <?php  
+    include('../includes/header.php');
     ?>
 
     <div class="container">

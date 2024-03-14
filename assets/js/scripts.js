@@ -7,17 +7,26 @@
 // Use this file to add JavaScript to your project
 
 
-// Obtém todos os links de navegação
-var navLinks = document.querySelectorAll('.header .navigation a');
+// // Obtém todos os links de navegação
+// var navLinks = document.querySelectorAll('.nav-link');
 
-// Itera sobre cada link
-for (var i = 0; i < navLinks.length; i++) {
-    // Verifica se o href do link corresponde à URL da página atual
-    if (navLinks[i].href == document.URL) {
-        // Adiciona a classe 'active' ao link
-        navLinks[i].className = 'active';
-    }
-}
+// // Itera sobre cada link
+// for (var i = 0; i < navLinks.length; i++) {
+//     // Cria um novo objeto URL usando o href do link
+//     var linkUrl = new URL(navLinks[i].href);
+
+//     // Remove o subdiretório do pathname do link, se houver
+//     var linkPath = linkUrl.pathname.replace('/subdiretorio', '');
+
+//     // Remove o subdiretório do pathname da página atual, se houver
+//     var pagePath = window.location.pathname.replace('/subdiretorio', '');
+
+//     // Verifica se o pathname do link corresponde ao pathname da página atual
+//     if (linkPath == pagePath) {
+//         // Adiciona a classe 'active' ao link
+//         navLinks[i].classList.add('active');
+//     }
+// }
 
 
 // Opcional
