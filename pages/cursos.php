@@ -34,19 +34,6 @@
     include('../includes/header.php');
     ?>
 
-    <div class="banner-title">
-        <div class="title-container">
-            <h1 class="title">Cursos</h1>
-        </div>
-
-        <div class="search">
-            <form action="" method="post">
-                <input type="text" name="searchbar" id="searchbar" placeholder="Pesquise por um e-book">
-                <button class="searchbutton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-    </div>
-
     <div class="container">
         <div class="row">
             <div class="col-md-16">
