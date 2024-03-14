@@ -13,7 +13,6 @@
 <body>
     <?php
     // include '../includes/botaoFlutuante.php';
-    include('../includes/header.php');
     include('../config/conexao.php');
 
     $courses = [];
@@ -29,6 +28,10 @@
     } else {
         echo "Erro na consulta: " . $conn->errorInfo();
     }
+    ?>
+
+    <?php 
+    include('../includes/header.php');
     ?>
 
     <div class="banner-title">

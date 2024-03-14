@@ -68,10 +68,6 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
     </nav>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid mb-5">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-4 mb-lg-0 " style="font-size: 26px;">
                     <li class="nav-item me-5">
