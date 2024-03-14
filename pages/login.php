@@ -66,7 +66,7 @@ if(isset($_SESSION['id_sistema'])){
                 <label class="form-label" for="loginEmail">
                         E-mail
                 </label>
-                <input type="email" name="loginEmail" id="loginEmail" class="form-control form-control-lg" placeholder="Insira um endereço de email" required/>
+                <input type="email" value="<?php echo $email; ?>" name="loginEmail" id="loginEmail" class="form-control form-control-lg" placeholder="Insira um endereço de email" required/>
               </div>
 
               <!-- Password input -->

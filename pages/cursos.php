@@ -15,8 +15,6 @@
     include('../includes/header.php');
     include('../config/conexao.php');
 
-    $courses = [];
-
     $sql = "SELECT nome, descricao, id_img FROM tb_curso";
     $resultado = $conn->query($sql);
 
@@ -60,7 +58,9 @@
                 </a>
             <?php endforeach; ?>
         </div>
-        <div class="button-container"><button class="veja-mais">Veja Mais</button></div>
+        <?php if(count($cursos) > 1){ ?>   
+            <div class="button-container"><button class="veja-mais">Veja Mais</button></div>
+        <?php } ?>
     </div>
 
     <?php
