@@ -16,12 +16,21 @@
     include('../includes/header.php');
     include('../config/conexao.php');
 
-    $courses = [];
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $search = $_POST["searchbar"];
+        $sql = "SELECT tb_curso.id ,tb_curso.nome, tb_curso.descricao, tb_curso.id_img, tb_img.img 
+        FROM tb_curso 
+        INNER JOIN tb_img 
+        ON tb_curso.id_img = tb_img.id
+        WHERE nome LIKE '%$search%' ";
+    }else{
+        $sql = "SELECT tb_curso.id ,tb_curso.nome, tb_curso.descricao, tb_curso.id_img, tb_img.img 
+        FROM tb_curso 
+        INNER JOIN tb_img 
+        ON tb_curso.id_img = tb_img.id";
+    }
 
-    $sql = "SELECT tb_curso.id ,tb_curso.nome, tb_curso.descricao, tb_curso.id_img, tb_img.img 
-    FROM tb_curso 
-    INNER JOIN tb_img 
-    ON tb_curso.id_img = tb_img.id";
+    
     $resultado = $conn->query($sql);
 
     if ($resultado) {
@@ -40,7 +49,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-6 search">
-                <form class="d-flex">
+                <form action="cursos.php" method="post" class="d-flex">
                     <input class="form-control me-2 searchbar" id="searchbar" name="searchbar" type="search" placeholder="Pesquise por curso" aria-label="Pesquisar">
                     <button class="searchbutton" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -51,7 +60,7 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="text-center subtitle">Os melhores Cursos para você.</h2>
+                <h2 class="text-center subtitle">Todos os Cursos</h2>
             </div>
         </div>
 
