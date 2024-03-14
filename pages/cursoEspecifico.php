@@ -1,9 +1,16 @@
 <?php
 include('../config/conexao.php');
 
-$sql_cursos = "SELECT * FROM tb_curso";
-$stmt_cursos = $conn->query($sql_cursos);
-$dados_cursos = $stmt_cursos->fetchAll(PDO::FETCH_ASSOC);
+if (isset($_GET['id'])) {
+    $curso_id = $_GET['id'];
+    $sql_cursos = "SELECT * FROM tb_curso WHERE id = :id";
+    $stmt_cursos = $conn->prepare($sql_cursos);
+    $stmt_cursos->execute([':id' => $curso_id]);
+    $cursoEspecifico = $stmt_cursos->fetch(PDO::FETCH_ASSOC);
+} else {
+    echo "ID do curso não especificado.";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,19 +40,33 @@ $dados_cursos = $stmt_cursos->fetchAll(PDO::FETCH_ASSOC);
     include('../includes/header.php');
     ?>
 
+    <?php
+    if ($cursoEspecifico) {
+        ?>
+        <div class="container py-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/cursos" style="text-decoration: none;">Cursos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <?= $cursoEspecifico['nome'] ?>
+                    </li>
+                </ol>
+            </nav>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <h1>
+                        <?= $cursoEspecifico['nome'] ?>
+                    </h1>
+                    <p>
+                        <?= $cursoEspecifico['descricao'] ?>
+                    </p>
+                </div>
+                <?php
+    } else {
+        echo "Nenhum curso encontrado.";
+    }
+    ?>
 
-    <div class="container py-5">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/cursos" style="text-decoration: none;">Cursos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Curso X</li>
-            </ol>
-        </nav>
-        <div class="row mb-5">
-            <div class="col-md-6">
-                <h1>Curso X</h1>
-                <p>Texto explicativo sobre o que a pessoa irá entender com o Curso X.</p>
-            </div>
             <div class="col-md-6">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/gh6txL0S5ME?si=lj5g2MN9VitRmspt"

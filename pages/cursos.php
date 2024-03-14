@@ -51,7 +51,7 @@
 
         <div class="container-curso">
             <?php foreach ($cursos as $curso): ?>
-                <a class="link-curso" href="cursoEspecifico.php">
+                <a class="link-curso" href="cursoEspecifico.php?id=<?php echo $curso['id']; ?>">
                     <div class="curso">
                         <div class="img-curso">
                             <?php
