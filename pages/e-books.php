@@ -3,7 +3,15 @@
 
     include "../config/conexao.php";
 
-    $sql = "SELECT tb_ebooks.id ,tb_ebooks.nome, tb_ebooks.descricao, tb_ebooks.imagem FROM tb_ebooks";
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $search = $_POST["searchbar"];
+        $sql = "SELECT tb_ebooks.id ,tb_ebooks.nome, tb_ebooks.descricao, tb_ebooks.imagem 
+        FROM tb_ebooks
+        WHERE nome LIKE '%$search%' ";
+    }else{
+        $sql = "SELECT tb_ebooks.id ,tb_ebooks.nome, tb_ebooks.descricao, tb_ebooks.imagem FROM tb_ebooks";
+    }
+
     $resultado = $conn->query($sql);
     if ($resultado) {
         $ebooks = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +54,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-6 search">
-                <form class="d-flex">
+                <form action="e-books.php" method="post" class="d-flex">
                     <input class="form-control me-2 searchbar" id="searchbar" name="searchbar" type="search" placeholder="Pesquise por um e-book" aria-label="Pesquisar">
                     <button class="searchbutton" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>

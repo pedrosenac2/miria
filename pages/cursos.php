@@ -88,7 +88,9 @@
                 </a>
             <?php endforeach; ?>
         </div>
-        <div class="button-container"><button class="veja-mais">Veja Mais</button></div>
+        <?php if(count($cursos) > 9) { ?>
+            <div class="button-container mt-5"><button class="veja-mais">Veja Mais</button></div>
+        <?php } ?>
     </div>
 
     <?php
