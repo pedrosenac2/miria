@@ -1,5 +1,5 @@
-<?php 
-    include '../config/controle-sessao.php';
+<?php
+include '../config/controle-sessao.php';
 ?>
 
 <!doctype html>
@@ -112,8 +112,7 @@
 				</div>
 				<h6 class="profile-name">Miriã Maugé</h6>
 				<div class="profile-actions">
-					<a href="#" data-toggle="tooltip" data-placement="top" title=""
-						data-original-title="Configurações">
+					<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
 						<i class="icon-settings1"></i>
 					</a>
 					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title=""
@@ -153,9 +152,9 @@
 									<li>
 										<a href="cadastroUsuario.php">Cadastrar Usuarios</a>
 									</li>
-									<!-- <li>
-											<a href="dashboard4.html">Dashboard 4</a>
-										</li> -->
+									<li>
+										<a href="../index.php">Pagina Inicial</a>
+									</li>
 								</ul>
 							</div>
 						</li>

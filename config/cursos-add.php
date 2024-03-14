@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     try {
         //code...
-        if (empty($nome) || empty($descricao)) {
+        if (empty($name) || empty($desc)) {
             throw new Exception('Erro, nome e descrição não podem ser Vazios!!');
         }
         
