@@ -22,7 +22,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-4 mb-lg-0 " style="font-size: 26px;">
                     <li class="nav-item me-5">
-                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item me-5 ">
                         <a class="nav-link" href="pages/cursos.php">Cursos</a>
@@ -71,7 +71,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-4 mb-lg-0 " style="font-size: 26px;">
                     <li class="nav-item me-5">
-                        <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item me-5 ">
                         <a class="nav-link" href="../pages/cursos.php">Cursos</a>
