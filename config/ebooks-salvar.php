@@ -3,11 +3,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $nome = $_POST["nome"];
     $descricao = $_POST["descricao"];
+    $imagem = $_FILES["imagem"];
     $id = $_POST["id"];
 
     try {
         //code...
-        if (empty($nome) || (empty($descricao) || (empty($id_img)))) {
+        if (empty($nome) || (empty($descricao) || (empty($imagem)))) {
             throw new Exception("Erro, todos os campos são obrigatórios");
         }
 

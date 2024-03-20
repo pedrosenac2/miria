@@ -97,25 +97,28 @@
             </div>
         </div>
 
-            <div class="container-curso">
+            <!-- <div class="container-curso"> -->
+            <div class="row">
                 <?php foreach($ebooks as $ebook){ ?> 
-            
-
-                <a class="link-curso" href="#">
-                    <div class="curso">
-                        <div class="img-curso">
-                            <?php
-                                echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; height:100%; object-fit:cover; margin-bottom:15px;">';
-                            ?>
+                
+                <div class="col-md-4 link-curso">    
+                    <a href="#">
+                        <div class="curso">
+                            <div class="img-curso">
+                                <?php
+                                    echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; height:100%; object-fit:cover; margin-bottom:15px;">';
+                                ?>
+                            </div>
+                            <div class="txt-curso">
+                                <h3 class="text-center"><?php echo $ebook["nome"] ?></h3>
+                                <!-- <p><?php echo $ebook["descricao"] ?></p> -->
+                            </div>
                         </div>
-                        <div class="txt-curso">
-                            <h3 class="nome-curso"><?php echo $ebook["nome"] ?></h3>
-                            <p><?php echo $ebook["descricao"] ?></p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 <?php } ?>
             </div>
+            <!-- </div> -->
 
             <!-- <a class="link-curso" href="#">
                 <div class="curso">
