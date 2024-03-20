@@ -1,17 +1,22 @@
 <?php
-    if(isset($_GET['id'])){
-        $id = $_GET['id'];
+try {
+    //code...
+    if (empty($_GET['id'])) {
+        throw new Exception("Não foi possivel atualizar, pois o ID não existe");
+    }
+    $id = $_GET['id'];
 
-        include "conexao.php";
+    include "conexao.php";
 
-        $sql = "DELETE FROM tb_ebooks WHERE id = :id";
+    $sql = "DELETE FROM tb_ebooks WHERE id = :id";
 
-        $stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare($sql);
 
-        $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':id', $id);
 
-        $stmt->execute();
-        header("Location: ../adm-test/lista.php");
-        exit();
+    $stmt->execute();
+    header("Location: ../adm-test/lista.php");
+    exit();
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
-?>

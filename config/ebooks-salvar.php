@@ -5,34 +5,37 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $descricao = $_POST["descricao"];
     $id = $_POST["id"];
 
-    include "conexao.php";
+    try {
+        //code...
+        if (empty($nome) || (empty($descricao) || (empty($id_img)))) {
+            throw new Exception("Erro, todos os campos são obrigatórios");
+        }
 
-    if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
-        // Obtém o caminho do arquivo temporário
-        $imagem_temp = $_FILES['imagem']['tmp_name'];
+        include "conexao.php";
 
-        // Lê o conteúdo do arquivo
-        $imagem_data = file_get_contents($imagem_temp);
+        if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
+            // Obtém o caminho do arquivo temporário
+            $imagem_temp = $_FILES['imagem']['tmp_name'];
 
-        // Atualiza a tb_ebooks
-        $stmt = $conn->prepare("UPDATE tb_ebooks SET nome = :nome, descricao = :descricao, imagem = :imagem WHERE id = :id");
-        $stmt->bindParam(":nome", $nome);
-        $stmt->bindParam(":descricao", $descricao);
-        $stmt->bindParam(":imagem", $imagem_data);
-        $stmt->bindParam(":id", $id);
-        $stmt->execute();
+            // Lê o conteúdo do arquivo
+            $imagem_data = file_get_contents($imagem_temp);
 
-    } else {
-        // Se houver um erro no upload do arquivo, exiba uma mensagem de erro
-        echo "Erro ao fazer upload da imagem.";
+            // Atualiza a tb_ebooks
+            $stmt = $conn->prepare("UPDATE tb_ebooks SET nome = :nome, descricao = :descricao, imagem = :imagem WHERE id = :id");
+            $stmt->bindParam(":nome", $nome);
+            $stmt->bindParam(":descricao", $descricao);
+            $stmt->bindParam(":imagem", $imagem_data);
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+        } else {
+            // Se houver um erro no upload do arquivo, exiba uma mensagem de erro
+            echo "Erro ao fazer upload da imagem.";
+        }
+        header("location: ../PainelADM/index.php");
+    } catch (Exception $e) {
+        echo "Erro: " . $e->getMessage();
     }
-
-    header("location: ../PainelADM/index.php");
-
 } else {
-
     echo "Acesso invalido";
     header("location: listagem.php");
-
 }
-?>
