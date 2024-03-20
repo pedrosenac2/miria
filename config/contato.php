@@ -29,19 +29,21 @@ $mail->addAddress('contato.testmiria@gmail.com', 'Receiver Name');
 $mail->isHTML(true);
 $mail->Subject = $assunto;
 
-$mail->Body = n12br ($mensagem);
-$mail->AltBody = n12br(strip_tags($mensagem));
+$mail->Body = ($mensagem);
+// n12br 
+$mail->AltBody = (strip_tags($mensagem));
+// n12br
 
-    if (!$mail->send()) {
-        echo "Erro não enviou";
-        $msg = 'Erro' .$mail->ErrorInfo;
-    } else {
-        header('Location: ../index.php?enviado');
-    }
+if (!$mail->send()) {
+    echo "Erro não enviou";
+    $msg = 'Erro' . $mail->ErrorInfo;
+} else {
+    header('Location: ../index.php?enviado');
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -54,10 +56,49 @@ $mail->AltBody = n12br(strip_tags($mensagem));
         echo "<h2>$msg</h2>";
     } ?>
     <form method="POST">
-        <label for="name">Name: <input type="text" name="name" id="name"></label><br>
-        <label for="email">Email address: <input type="email" name="email" id="email"></label><br>
-        <label for="message">Message: <textarea name="message" id="message" rows="8" cols="20"></textarea></label><br>
-        <input type="submit" value="Send">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="departamento">Departamento:</label>
+            <input type="text" name="departamento">
+        </div>
+        <div class="form-group">
+            <label for="cargo">Cargo:</label>
+            <input type="text" name="cargo">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone">
+        </div>
+        <div class="form-group">
+            <label for="empresa">Empresa:</label>
+            <input type="text" name="empresa">
+        </div>
+        <div class="form-group">
+            <label for="colaboradores">Número Aproximado de Colaboradores:</label>
+            <input type="number" name="colaboradores">
+        </div>
+        <div class="form-group">
+            <label for="area_atuacao">Área de Atuação:</label>
+            <input type="text" name="area_atuacao">
+        </div>
+        <div class="form-group">
+            <label for="mensagem">Deixe uma mensagem:</label>
+            <textarea name="mensagem"></textarea>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" id="aceita_termos" class="form-check-input" required>
+            <label for="aceita_termos" class="form-check-label">Ao clicar em Enviar você está aceitando os termos da
+                nossa política de privacidade</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </body>
 
