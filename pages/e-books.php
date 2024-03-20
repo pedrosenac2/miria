@@ -101,16 +101,20 @@
                 <?php foreach($ebooks as $ebook){ ?> 
             
 
-                <a class="link-curso" href="#">
+                    <a class="link-curso" href="ebookEspecifico.php?id=<?php echo $ebook['id']; ?>">
                     <div class="curso">
                         <div class="img-curso">
                             <?php
-                                echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; height:100%; object-fit:cover; margin-bottom:15px;">';
+                            echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:15px;">';
                             ?>
                         </div>
                         <div class="txt-curso">
-                            <h3 class="nome-curso"><?php echo $ebook["nome"] ?></h3>
-                            <p><?php echo $ebook["descricao"] ?></p>
+                            <h3 class="nome-curso">
+                                <?php echo $ebook['nome']; ?>
+                            </h3>
+                            <p>
+                                <?php echo $ebook['descricao']; ?>
+                            </p>
                         </div>
                     </div>
                 </a>
