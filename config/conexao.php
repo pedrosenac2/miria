@@ -1,7 +1,7 @@
 <?php
-$servername = "10.97.45.110";
-$username = "ebook";
-$password = "1234";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $dbname = "db_miria";
 
 try {
