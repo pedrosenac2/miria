@@ -17,7 +17,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
             </button>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid mb-5">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-4 mb-lg-0 " style="font-size: 26px;">
@@ -66,7 +66,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
             </button>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid mb-5">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-4 mb-lg-0 " style="font-size: 26px;">
