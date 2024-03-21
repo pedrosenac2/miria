@@ -67,25 +67,28 @@
             </div>
         </div>
 
-        <div class="container-curso">
+        <div class="row">
             <?php foreach ($cursos as $curso): ?>
-                <a class="link-curso" href="cursoEspecifico.php?id=<?php echo $curso['id']; ?>">
-                    <div class="curso">
-                        <div class="img-curso">
-                            <?php
-                            echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($curso['img']) . '" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:15px;">';
-                            ?>
+
+                <div class="col-md-4 link-curso">
+                    <a href="cursoEspecifico.php?id=<?php echo $curso['id']; ?>">
+                        <div class="curso">
+                            <div class="img-curso">
+                                <?php
+                                echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($curso['img']) . '" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:15px;">';
+                                ?>
+                            </div>
+                            <div class="txt-curso">
+                                <h3 class="text-center">
+                                    <?php echo $curso['nome']; ?>
+                                </h3>
+                                <p>
+                                    <?php echo $curso['descricao']; ?>
+                                </p>
+                            </div>
                         </div>
-                        <div class="txt-curso">
-                            <h3 class="nome-curso">
-                                <?php echo $curso['nome']; ?>
-                            </h3>
-                            <p>
-                                <?php echo $curso['descricao']; ?>
-                            </p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             <?php endforeach; ?>
         </div>
         <?php if(count($cursos) > 9) { ?>

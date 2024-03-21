@@ -37,15 +37,15 @@ try {
             <input type="hidden" id="id" name="id" value="<?php echo htmlspecialchars($row['id']) ?>">
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
-              <input type="text" name="nome" class="form-control" value="<?php echo htmlspecialchars($row['nome']); ?>" id="nome" required>
+              <input type="text" name="nome" class="form-control" value="<?php echo htmlspecialchars($row['nome']); ?>" id="nome">
             </div>
             <div class="mb-3">
               <label for="descricao" class="form-label">Descricão</label>
-              <input type="text" name="descricao" class="form-control" value="<?php echo htmlspecialchars($row['descricao']); ?>" id="descricao" required>
+              <input type="text" name="descricao" class="form-control" value="<?php echo htmlspecialchars($row['descricao']); ?>" id="descricao">
             </div>
             <div class="form-group">
               <label for="imagem">Imagem:</label>
-              <input type="file" id="imagem" name="imagem" accept="image/*" required>
+              <input type="file" id="imagem" name="imagem" accept="image/*">
             </div>
             <div class="d-flex justify-content-center mt-5">
               <button type="submit" class="btn btn-primary">Salvar</button>
