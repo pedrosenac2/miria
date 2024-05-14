@@ -4,7 +4,7 @@ try{
     if ($_SERVER["REQUEST_METHOD"] != "POST") {
         throw new Exception("operação invalida!");
     } 
-    if(!isset($_POST["nome"]) || !isset($_POST["loginemail"]) || !isset($_POST["loginSenha"]) || !isset($_POST["confirmaSenha"])) {
+    if(!isset($_POST["nome"]) || !isset($_POST["loginEmail"]) || !isset($_POST["loginSenha"]) || !isset($_POST["confirmaSenha"])) {
         throw new Exception("Algum campo não foi preenchido");
     }
 
