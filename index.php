@@ -105,37 +105,11 @@
 
     <!-- Fim Cards -->
 
-    <!-- Sobre -->
-    <div class="container mt-5">
-
-        <span class="mb-4 text-decoration-none" style="color: rgb(2, 108, 207); display: inline-block; width: auto; font-size: 18px;">
-            / Sobre Min
-        </span>
-
-        <div class="row align-items-start">
-            <!-- Div da esquerda com o caminho, título e texto -->
-            <div class="col-sm-6">
-                <div class="title">
-                    <h2>Miriã Maugé</h2>
-                </div>
-                <div class="text">
-                    <p>
-                        Minha Missão é inspirar e implementar soluções
-                        para o
-                        desafio ambiental. Estamos comprometidos em aumentar a conscientização e o entendimento sobre
-                        questões ambientais e a necessidade urgente de ação. Além disso, buscamos desenvolver e promover
-                        novas tecnologias que minimizem nosso impacto no meio ambiente.
-                    </p>
-                </div>
-            </div>
-            <!-- fim -->
-
-            <!-- Div da direita com a imagem -->
-            <div class="col-sm-6">
-                <img src="assets/img/miria.png" alt="Descrição da imagem" style="width: 70%;">
-            </div>
-        </div>
+    <div class="container" style="text-align: center; margin-top: 100px; margin-bottom: 100px;">
+        <!-- <h1>Eventos</h1> -->
     </div>
+
+    <!-- Sobre -->
 
     <!-- Fim Sobre-->
 
