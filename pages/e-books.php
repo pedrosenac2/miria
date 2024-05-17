@@ -1,7 +1,23 @@
 <?php
     $ebooks = [];
 
-    include "../config/searchbar.php"
+    include "../config/conexao.php";
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $search = $_POST["searchbar"];
+        $sql = "SELECT tb_ebooks.id ,tb_ebooks.nome, tb_ebooks.descricao, tb_ebooks.imagem 
+        FROM tb_ebooks
+        WHERE nome LIKE '%$search%' ";
+    }else{
+        $sql = "SELECT tb_ebooks.id ,tb_ebooks.nome, tb_ebooks.descricao, tb_ebooks.imagem FROM tb_ebooks";
+    }
+
+    $resultado = $conn->query($sql);
+    if ($resultado) {
+        $ebooks = $resultado->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        echo "Erro na consulta: " . $conn->errorInfo();
+    }
 ?>
 
 
@@ -25,7 +41,7 @@
 </head>
 
 <body>
-
+    
     <?php
     include('../includes/header.php');
     ?>
@@ -47,6 +63,21 @@
             </div>
         </div>
 
+        <!-- <div class="row">
+            <div class="col-3"></div> 
+
+            <div class="col-6">
+                <div class="search">
+                    <form action="" method="post">
+                        <input type="text" name="searchbar" id="searchbar" placeholder="Pesquise por um e-book">
+                        <button class="searchbutton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-3"></div>
+        </div> -->
+
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="text-center subtitle">Todos os e-books</h2>
@@ -66,11 +97,12 @@
             </div>
         </div>
 
+            <!-- <div class="container-curso"> -->
             <div class="row">
                 <?php foreach($ebooks as $ebook){ ?> 
                 
                 <div class="col-md-4 link-curso">    
-                    <a href="ebookEspecifico.php?id=<?php echo $ebook['id']; ?>">
+                    <a href="#">
                         <div class="curso">
                             <div class="img-curso">
                                 <?php
@@ -79,13 +111,220 @@
                             </div>
                             <div class="txt-curso">
                                 <h3 class="text-center"><?php echo $ebook["nome"] ?></h3>
+                                <!-- <p><?php echo $ebook["descricao"] ?></p> -->
                             </div>
                         </div>
                     </a>
                 </div>
                 <?php } ?>
             </div>
+            <!-- </div> -->
 
+            <!-- <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="link-curso" href="#">
+                <div class="curso">
+                    <div class="img-curso">
+                        <img src="" alt="">
+                    </div>
+                    <div class="txt-curso">
+                        <h3 class="nome-curso">Ebook Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </a> -->
+
+        <!-- </div> -->
         <?php if(count($ebooks) > 9) { ?>
             <div class="button-container mt-5"><button class="veja-mais">Veja Mais</button></div>
         <?php } ?>

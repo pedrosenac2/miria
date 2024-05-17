@@ -114,9 +114,76 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 			<!-- Sidebar content start -->
 			<div class="sidebar-content">
 
-				<!-- Sidebar content start -->
-				<?php include '../config/menu_lateral.php'; ?>
-				<!-- Sidebar content end -->
+				<!-- sidebar menu start -->
+				<div class="sidebar-menu">
+					<ul>
+						<li class="sidebar-dropdown active">
+							<a href="#">
+								<i class="icon-home2"></i>
+								<span class="menu-text">Home</span>
+							</a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="index.php" class="current-page">HOME</a>
+									</li>
+									<li>
+										<a href="cadastroCurso.php">Cadastrar Curso</a>
+									</li>
+									<li>
+										<a href="cadastroEbook.php">Cadastrar E-book</a>
+									</li>
+									<li>
+										<a href="cadastroUsuario.php">Cadastrar Usuarios</a>
+									</li>
+									<!-- <li>
+										<a href="listaUsuario.php">Listar Usuario</a>
+									</li> -->
+									<li>
+										<a href="../index.php">Pagina Inicial</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="sidebar-dropdown">
+							<a href="#">
+								<i class="icon-calendar1"></i>
+								<span class="menu-text">Eventos</span>
+							</a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="#">Calendario</a>
+									</li>
+							</div>
+						</li>
+
+						<li class="sidebar-dropdown">
+							<a href="#">
+								<i class="icon-unlock"></i>
+								<span class="menu-text">Authentication</span>
+							</a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="../pages/login.php">Login</a>
+									</li>
+									<li>
+										<a href="../config/logout.php">Sair</a>
+									</li>
+									<li>
+										<a href="#">Esqueci a senha</a>
+									</li>
+									<li>
+										<a href="../config/usuarios.php">Listar Usuarios do Sistema</a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- sidebar menu end -->
 
 			</div>
 			<!-- Sidebar content end -->
