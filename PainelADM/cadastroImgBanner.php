@@ -1,6 +1,7 @@
-<?php 
-    include '../config/controle-sessao.php';
+<?php
+include '../config/controle-sessao.php';
 ?>
+
 
 <!doctype html>
 <html lang="pt-br">
@@ -23,8 +24,8 @@
 
 
     <!-- *************
-			************ Common Css Files *************
-		************ -->
+            ************ Common Css Files *************
+        ************ -->
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Icomoon Font Icons css -->
@@ -35,8 +36,8 @@
     <link rel="stylesheet" href="css/chat.css">
 
     <!-- *************
-			************ Vendor Css Files *************
-		************ -->
+            ************ Vendor Css Files *************
+        ************ -->
 
     <style>
         .form-group {
@@ -73,6 +74,14 @@
         .form-group button[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        /* Estilos para centralizar o alerta */
+        .alert-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 
 </head>
@@ -96,8 +105,8 @@
             <!-- Sidebar brand start  -->
             <div class="sidebar-brand">
                 <!-- <a href="index.html" class="logo">
-						<img src="img/logo.png" alt="Logo" />
-					</a> -->
+                        <img src="img/logo.png" alt="Logo" />
+                    </a> -->
                 <a href="index.php" class="logo">
                     <img src="img/logo.svg" alt="Bootstrap Gallery">
                 </a>
@@ -112,14 +121,15 @@
                 </div>
                 <h6 class="profile-name">Miriã Maugé</h6>
                 <div class="profile-actions">
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
+                    <a href="account-settings.html" data-toggle="tooltip" data-placement="top" title=""
+                        data-original-title="Configurações">
                         <i class="icon-settings1"></i>
                     </a>
                     <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title=""
                         data-original-title="X">
                         <i class="icon-twitter1"></i>
                     </a>
-                    <a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
+                    <a href="login.html" class="red" data-toggle="tooltip" data-placement="top" title=""
                         data-original-title="Sair">
                         <i class="icon-power1"></i>
                     </a>
@@ -130,9 +140,9 @@
             <!-- Sidebar content start -->
             <div class="sidebar-content">
 
-			<!-- Sidebar content start -->
-			<?php include '../config/menu_lateral.php'; ?>
-			<!-- Sidebar content end -->
+                <!-- Sidebar content start -->
+                <?php include '../config/menu_lateral.php'; ?>
+                <!-- Sidebar content end -->
 
             </div>
             <!-- Sidebar content end -->
@@ -321,24 +331,19 @@
                 </div>
 
                 <div class="titulo">
-                    <h1 class="text-start" style="margin-left: 34px;">Cadastre um Usuario</h1>
+                    <h1 class="text-start" style="margin-left: 34px;">Cadastre aqui as Imagens do Banner</h1>
+                    <?php
+                    // Verifica se a imagem foi cadastrada com sucesso
+                    if (isset($_GET['success']) && $_GET['success'] == 'true') {
+                        // Exibe a mensagem de sucesso
+                        echo '<div class="alert alert-success">A imagem foi cadastrada com sucesso!</div>';
+                    }
+                    ?>
                     <div class="container">
-                        <form action="../config/cadastro-usuario.php" method="post" enctype="multipart/form-data">
+                        <form action="../config/imgBanner-add.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="nome">Nome:</label>
-                                <input type="text" id="nome" name="nome" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="loginEmail">Email:</label>
-                                <textarea id="loginEmail" name="loginEmail" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="loginSenha">Senha:</label>
-                                <textarea id="loginSenha" name="loginSenha" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="confirmaSenha">Confirmar Senha:</label>
-                                <textarea id="confirmaSenha" name="confirmaSenha" required></textarea>
+                                <label for="imagem">Imagem:</label>
+                                <input type="file" id="imagem" name="imagem" accept="image/*" required>
                             </div>
                             <div class="form-group">
                                 <button type="submit">Enviar</button>
@@ -373,6 +378,14 @@
 
     </div>
     <!-- Page wrapper end -->
+
+    <script>
+        // Faz a mensagem de sucesso desaparecer após 3 segundos
+        setTimeout(function () {
+            document.querySelector('.alert-success').style.display = 'none';
+        }, 3000);
+    </script>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

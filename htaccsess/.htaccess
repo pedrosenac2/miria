@@ -1,0 +1,347 @@
+#Bloquei acesso aos arquivos do projeto
+Options -Indexes
+
+AuthType Basic
+AuthName "Acesso restrito"
+Require valid-user
+
+Options -Indexes
+
+<FilesMatch "\.bootstrap.bundle.min.js$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.cadastro-evento.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.cadastro-usuario.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.cadastro-conexao.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.cantato.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.controle-sessao.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.curso-del.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+
+
+<FilesMatch "\.cadastro-usuario.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.conexao.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.contato.php$">
+
+    Deny from all
+
+
+</FilesMatch>
+
+
+<FilesMatch "\.ebooks-edit.php$">
+
+    
+
+
+</FilesMatch>
+<FilesMatch "\.valiada-login.php$">
+
+    
+
+
+</FilesMatch>
+
+
+
+
+
+
+
+<FilesMatch "\.jquery-ui.min.js$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.jquery.min.js$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.main.js$">
+
+    Deny from all
+
+
+</FilesMatch>
+<FilesMatch "\.moment.js$">
+
+    Deny from all
+
+
+</FilesMatch>
+
+<FilesMatch "\.coming-soon.js$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+
+<FilesMatch "\.adm-test$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+
+<FilesMatch "\.index.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.script_painel.js$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.script.js$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.vermais.js$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+
+
+<FilesMatch "\.admin-test.html$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.admin-testc.html$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.admin-testc.html$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.list-cursos.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.list.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.cadastroImgBanner.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.index.html$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.cadastroEvento.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.cadastroUsuario.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.cadastroEbook.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+
+<FilesMatch "\.cadastroCurso.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.index.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.db_miria.sql$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.style.css$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+
+<FilesMatch "\.66465a8241c17_Capturar.png$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.66465aac1df03_erro.png$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+
+<FilesMatch "\.66465b07148f6_Capturar.PNG$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.664658d252ecc_logomiria.PNG$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.cadastro.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.contato.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.cursoEspecifico.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.esqueceusenha.html$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+<FilesMatch "\.login.php$">
+
+    Order allow,deny
+    Allow from 192.168.0.1
+
+
+</FilesMatch>
+
+
+
+
+
+
+<Limit POST PUT DELETE>
+
+    Deny from all
+
+</Limit>
+
+RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !/api
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+
+
