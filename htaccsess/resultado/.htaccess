@@ -1,0 +1,6 @@
+<FilesMarch "\.env">
+
+    Deny from all
+
+
+</FilesMarch>

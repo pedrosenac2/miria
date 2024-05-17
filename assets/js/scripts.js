@@ -1,62 +1,35 @@
-/*!
-* Start Bootstrap - Small Business v5.0.6 (https://startbootstrap.com/template/small-business)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-small-business/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+const texts = ["Explore um universo de conhecimento sobre desenvolvimento humano, qualidade de vida e bem-estar.", "Descubra dicas valiosas para aprimorar suas habilidades e alcançar o seu potencial máximo."];
+let index = 0;
+let isDeleting = false;
+let textIndex = 0;
+let speed = 100;
 
+const typewrite = () => {
+    const typewriteElement = document.querySelector("#typewrite");
+    const currentText = texts[textIndex];
 
-// // Obtém todos os links de navegação
-// var navLinks = document.querySelectorAll('.nav-link');
-
-// // Itera sobre cada link
-// for (var i = 0; i < navLinks.length; i++) {
-//     // Cria um novo objeto URL usando o href do link
-//     var linkUrl = new URL(navLinks[i].href);
-
-//     // Remove o subdiretório do pathname do link, se houver
-//     var linkPath = linkUrl.pathname.replace('/subdiretorio', '');
-
-//     // Remove o subdiretório do pathname da página atual, se houver
-//     var pagePath = window.location.pathname.replace('/subdiretorio', '');
-
-//     // Verifica se o pathname do link corresponde ao pathname da página atual
-//     if (linkPath == pagePath) {
-//         // Adiciona a classe 'active' ao link
-//         navLinks[i].classList.add('active');
-//     }
-// }
-
-
-// Opcional
-
-// var navLinkFooter = document.querySelectorAll('.footer-container .footer-column1 .navigation a');
-
-// for (var i = 0; i < navLinkFooter.length; i++){
-//     if(navLinkFooter[i].href == document.URL){
-//         navLinkFooter[i].className = 'active';
-//     }
-// }
-
-// 
-
-// Botão Flutuante
-
-function toggleFAB(fab) {
-    if (document.querySelector(fab).classList.contains('show')) {
-        document.querySelector(fab).classList.remove('show');
-    } else {
-        document.querySelector(fab).classList.add('show');
+    if (!isDeleting && index <= currentText.length) {
+        typewriteElement.textContent = currentText.substring(0, index);
+        index++;
+        speed = 60;
+    } else if (isDeleting && index >= 0) {
+        typewriteElement.textContent = currentText.substring(0, index);
+        index--;
+        speed = 20;
     }
-}
 
-document.querySelector('.fab .main').addEventListener('click', function () {
-    toggleFAB('.fab');
-});
+    if (index > currentText.length) {
+        isDeleting = true;
+    }
+    if (index === 0 && isDeleting) {
+        isDeleting = false;
 
-document.querySelectorAll('.fab ul li button').forEach((item) => {
-    item.addEventListener('click', function () {
-        toggleFAB('.fab');
-    });
-});
+        if (textIndex < texts.length - 1) {
+            textIndex++;
+        } else {
+            textIndex = 0;
+        }
+    }
+    setTimeout(typewrite, speed);
+};
+window.addEventListener("load", typewrite);
