@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <title>Site MiriaMauge</title>
 
     <style>
@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="p-0 m-0 border-0 bd-example m-0 border-0">
+<body>
 
     <?php
     include_once 'includes/header.php';
