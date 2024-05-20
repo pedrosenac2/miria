@@ -100,7 +100,7 @@ $conn->close();
 
     <!-- esse cara é o cassosel -->
 
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide" style="height: 100%;">
         <div class="carousel-indicators">
             <?php
             // Diretório onde as imagens estão armazenadas
@@ -207,8 +207,8 @@ $conn->close();
     <div class="container">
         <div class="nextEvents">
             <h2>Próximos Eventos</h2>
-            <div class="event-section d-flex justify-content-center">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="event-section">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  style="height: 100%;">
                     <div class="carousel-inner">
                         <?php foreach ($eventos as $index => $evento): ?>
                             <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">

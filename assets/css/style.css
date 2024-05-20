@@ -270,6 +270,10 @@ input[type="submit"]:hover {
     gap: 10px;
 }
 
+.nextEvents p{
+    font-size: 35px;
+}
+
 .eventsImg img {
     width: 800px;
 }
