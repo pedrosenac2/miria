@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -20,6 +22,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
     </style>
+
 
 </head>
 
@@ -102,45 +105,8 @@
 
     <!-- Fim Cards -->
 
-<<<<<<< Updated upstream
     <div class="container" style="text-align: center; margin-top: 100px; margin-bottom: 100px;">
         <!-- <h1>Eventos</h1> -->
-=======
-    <!-- Sobre -->
-    <div class="container mt-5">
-
-        <span class="mb-4 text-decoration-none" style="color: rgb(2, 108, 207); display: inline-block; width: auto; font-size: 18px;">
-            / Sobre Min
-        </span>
-
-        <div class="row align-items-start">
-            <!-- Div da esquerda com o caminho, título e texto -->
-            <div class="title">
-                    <h2>Miriã Maugé</h2>
-                </div>
-                <div class="sobreMim">
-                    <div class="img">
-                    <img src="assets/img/miria.png" alt="Descrição da imagem">
-                    </div>
-
-                    <div class="text">
-                         <p>
-                        Minha Missão é inspirar e implementar soluções
-                        para o
-                        desafio ambiental. Estamos comprometidos em aumentar a conscientização e o entendimento sobre
-                        questões ambientais e a necessidade urgente de ação. Além disso, buscamos desenvolver e promover
-                        novas tecnologias que minimizem nosso impacto no meio ambiente.
-                    </p>
-                    </div>
-                </div>
-                
-            </div>
-            <!-- fim -->
-
-            <!-- Div da direita com a imagem -->
-            
-        </div>
->>>>>>> Stashed changes
     </div>
 
     <!-- Sobre -->
