@@ -20,27 +20,12 @@
     --weight3: 600;
 }
 
-.navbar-collapse .navbar-nav .nav-item .nav-link a {
-    display: inline-block;
-    padding: 1em 3.5em;
-    background-color: var(grey);
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0.3em;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: .875rem;
-}
-
 /* Webhost */
 .blank {
     width: 400px;
 }
-/* fim */
+/* nav-bar */
 
-
-/* header */
 .navbar-nav {
     display: flex;
     justify-content: space-around;
@@ -51,6 +36,43 @@
     width: 100%;
     font-size: 20px;
 }
+  .nav-grid { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  } 
+  .hoverLink{
+    font-weight: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;  
+
+    display: inline-block;
+    position: relative;
+  }
+  .hoverLink:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .hoverLink:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .navDiv{
+    display: flex;
+    justify-content:space-between;
+  }
+
 
 @media (max-width: 400px) {
     h1 {
@@ -154,122 +176,6 @@ h2 {
 }
 
 
-/* Botão Flutuante */
-.fab {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 1000;
-}
-
-.fab button {
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    border-radius: 30px;
-    background-color: #cb60b3;
-    border: none;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
-    font-size: 24px;
-    color: white;
-
-    -webkit-transition: .2s ease-out;
-    -moz-transition: .2s ease-out;
-    transition: .2s ease-out;
-}
-
-.fab button:focus {
-    outline: none;
-}
-
-.fab button.main {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    background-color: #07a7cf;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-}
-
-.fab button.main:before {
-    content: '⏚';
-}
-
-.fab ul {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 0;
-    padding-right: 5px;
-    margin: 0;
-    list-style: none;
-    z-index: 1000;
-
-    -webkit-transition: .2s ease-out;
-    -moz-transition: .2s ease-out;
-    transition: .2s ease-out;
-}
-
-.fab ul li {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    margin-bottom: -10%;
-    opacity: 0;
-
-    -webkit-transition: .3s ease-out;
-    -moz-transition: .3s ease-out;
-    transition: .3s ease-out;
-}
-
-.fab ul li label {
-    margin-right: 10px;
-    white-space: nowrap;
-    display: block;
-    margin-top: 10px;
-    padding: 5px 8px;
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-    border-radius: 3px;
-    height: 18px;
-    font-size: 16px;
-    pointer-events: none;
-    opacity: 0;
-
-    -webkit-transition: .2s ease-out;
-    -moz-transition: .2s ease-out;
-    transition: .2s ease-out;
-}
-
-.fab.show button.main,
-.fab.show button.main {
-    outline: none;
-    background-color: #7716ff;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, .5);
-}
-
-.fab.show button.main:before,
-.fab.show button.main:before {
-    content: '↑';
-}
-
-.fab.show button.main+ul,
-.fab.show button.main+ul {
-    bottom: 70px;
-}
-
-.fab.show button.main+ul li,
-.fab.show button.main+ul li {
-    margin-bottom: 10px;
-    opacity: 1;
-}
-
-.fab.show button.main+ul li:hover label,
-.fab.show button.main+ul li:hover label {
-    opacity: 1;
-}
 
 /* Fim */
 

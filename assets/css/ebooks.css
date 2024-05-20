@@ -17,27 +17,11 @@
     --weight2: 400;
     --weight3: 600;
 }
-
-.navbar-collapse .navbar-nav .nav-item .nav-link a {
-    display: inline-block;
-    padding: 1em 3.5em;
-    background-color: var(grey);
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0.3em;
-    font-weight: 700;
-    letter-spacing: .5px;
-    font-size: .875rem;
-}
 /* Webhost */
 .blank {
     width: 400px;
 }
-/* fim */
-
-
-/* header */
+/* nav-bar */
 .navbar-nav {
     display: flex;
     justify-content: space-around;
@@ -48,6 +32,43 @@
     width: 100%;
     font-size: 20px;
 }
+  .nav-grid { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  } 
+  .hoverLink{
+    font-weight: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;  
+
+    display: inline-block;
+    position: relative;
+  }
+  .hoverLink:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .hoverLink:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .navDiv{
+    display: flex;
+    justify-content:space-between;
+  }
+
 
 @media (max-width: 400px) {
     h1 {
