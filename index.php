@@ -40,118 +40,6 @@ $conn->close();
 
 
 </head>
-<style>
-    .conteudo {
-        text-align: center;
-        line-height: 0.8;
-        margin-bottom: 50px;
-        margin-top: 100px;
-    }
-
-    .conteudo p {
-        margin: 0 auto;
-        line-height: 2;
-        color: var(--grayishBlue);
-    }
-
-
-    .nextEvents h2 {
-        font-family: Roboto, sans-serif;
-        font-size: 45px;
-        letter-spacing: 5px;
-        margin-bottom: 40px;
-        position: relative;
-    }
-
-    .nextEvents h2::after {
-        content: "";
-        position: absolute;
-        left: 9%;
-        bottom: 0;
-        width: 283px;
-        height: 3px;
-        background-color: #800000;
-    }
-
-    .nextEventsContent {
-        display: flex;
-        gap: 10px;
-    }
-
-    .eventsImg img {
-        width: 800px;
-    }
-
-    .eventsTxt {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .eventDateTime {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .eventAddress,
-    .eventDate {
-        font-family: Roboto, sans-serif;
-        font-weight: bold;
-        font-size: 25px;
-    }
-
-    .eventDescription {
-        font-family: Roboto, sans-serif;
-        font-size: 20px;
-    }
-
-    .finishEvents {
-        margin-top: 100px;
-    }
-
-    .finishEvents h2 {
-        font-family: Roboto, sans-serif;
-        font-size: 45px;
-        letter-spacing: 5px;
-        margin-bottom: 40px;
-        position: relative;
-    }
-
-    .finishEvents h2::after {
-        content: "";
-        position: absolute;
-        left: 9%;
-        bottom: 0;
-        width: 283px;
-        height: 3px;
-        background-color: #800000;
-    }
-
-    .imagem-galeria {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .imagem-galeria li {
-        flex: auto;
-        height: 300px;
-    }
-
-    .imagem-galeria li img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        vertical-align: middle;
-        border-radius: 5px;
-    }
-</style>
-
-
-
 
 
 </head>
@@ -316,43 +204,46 @@ $conn->close();
     </div>
 
     <!-- Eventos -->
+    <div class="container">
+        <div class="nextEvents">
+            <h2>Próximos Eventos</h2>
+            <div class="event-section d-flex justify-content-center">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <?php foreach ($eventos as $index => $evento): ?>
+                            <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                                <div class="nextEventsContent">
+                                    <div class="eventsImg">
+                                        <img src="data:image/jpeg;base64,<?php echo base64_encode($evento['imagem']); ?>"
+                                            class="d-block w-100" alt="">
+                                    </div>
 
-    <div class="event-section d-flex justify-content-center">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <?php foreach ($eventos as $index => $evento): ?>
-                    <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
-                        <div class="nextEventsContent">
-                            <div class="eventsImg">
-                                <img src="data:image/jpeg;base64,<?php echo base64_encode($evento['imagem']); ?>"
-                                    class="d-block w-100" alt="">
-                            </div>
-
-                            <div class="eventsTxt">
-                                <p class="eventAddress"><?php echo htmlspecialchars($evento['localizacao']); ?></p>
-                                <p class="eventDescription"><?php echo htmlspecialchars($evento['descricao']); ?></p>
-                                <div class="eventDateTime">
-                                    <p class="eventDate"><?php echo htmlspecialchars($evento['data_evento']); ?></p>
-                                    <p class="eventDate">
-                                        <?php echo isset($evento['horario_evento']) ? htmlspecialchars($evento['horario_evento']) : 'Horário não disponível'; ?>
-                                    </p>
+                                    <div class="eventsTxt">
+                                        <p class="eventAddress"><?php echo htmlspecialchars($evento['localizacao']); ?></p>
+                                        <p class="eventDescription"><?php echo htmlspecialchars($evento['descricao']); ?>
+                                        </p>
+                                        <div class="eventDateTime">
+                                            <p class="eventDate"><?php echo htmlspecialchars($evento['data_evento']); ?></p>
+                                            <p class="eventDate">
+                                                <?php echo isset($evento['horario_evento']) ? htmlspecialchars($evento['horario_evento']) : ''; ?>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
         </div>
-
-
     </div>
 
 
