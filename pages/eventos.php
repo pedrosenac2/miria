@@ -30,7 +30,7 @@
             <h2>Próximos Eventos</h2>
             <div class="nextEventsContent">
                 <div class="eventsImg">
-                    <img src="http://localhost/miria1/assets/img/img_banner/banner2.jpg" alt="">
+                    <img src="../assets/img/img_banner/banner2.jpg" alt="">
                 </div>
 
                 <div class="eventsTxt">
@@ -48,23 +48,23 @@
             <div class="galeria">
                 <ul class="imagem-galeria">
                     <li>
-                        <a href="http://localhost/miria1/assets/img/img_banner/banner2.jpg" alt="Imagem 1" class="carousel-image" data-fancybox="galeria">
-                            <img src="http://localhost/miria1/assets/img/img_banner/banner2.jpg" alt="Imagem 1" class="carousel-image" alt="Imagem galeria 1">
+                        <a href="../assets/img/img_banner/banner2.jpg" alt="Imagem 1" class="carousel-image" data-fancybox="galeria">
+                            <img src="../assets/img/img_banner/banner2.jpg" alt="Imagem 1" class="carousel-image" alt="Imagem galeria 1">
                         </a>
                     </li>
                     <li>
-                        <a href="http://localhost/miria1/assets/img/img_banner/banner1.jpg" alt="Imagem 2" data-fancybox="galeria">
-                            <img src="http://localhost/miria1/assets/img/img_banner/banner1.jpg" alt="Imagem 2" alt="Imagem galeria 2">
+                        <a href="../assets/img/img_banner/banner1.jpg" alt="Imagem 2" data-fancybox="galeria">
+                            <img src="../assets/img/img_banner/banner1.jpg" alt="Imagem 2" alt="Imagem galeria 2">
                         </a>
                     </li>
                     <li>
-                        <a href="http://localhost/miria1/assets/img/img_banner/banner3.jpg" data-fancybox="galeria">
-                            <img src="http://localhost/miria1/assets/img/img_banner/banner3.jpg" alt="Imagem galeria 3">
+                        <a href="../assets/img/img_banner/banner3.jpg" data-fancybox="galeria">
+                            <img src="../assets/img/img_banner/banner3.jpg" alt="Imagem galeria 3">
                         </a>
                     </li>
                     <li>
-                        <a href="http://localhost/miria1/assets/img/img_banner/banner4.jpg" data-fancybox="galeria">
-                            <img src="http://localhost/miria1/assets/img/img_banner/banner4.jpg" alt="Imagem galeria 4">
+                        <a href="../assets/img/img_banner/banner4.jpg" data-fancybox="galeria">
+                            <img src="../assets/img/img_banner/banner4.jpg" alt="Imagem galeria 4">
                         </a>
                     </li>
                 </ul>
