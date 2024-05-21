@@ -19,6 +19,15 @@
 CREATE DATABASE IF NOT EXISTS `db_miria` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `db_miria`;
 
+-- Copiando estrutura para tabela db_miria.tb_carrosel
+CREATE TABLE IF NOT EXISTS `tb_carrosel` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `img_banner` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Exportação de dados foi desmarcado.
+
 -- Copiando estrutura para tabela db_miria.tb_curso
 CREATE TABLE IF NOT EXISTS `tb_curso` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -27,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `tb_curso` (
   `id_img` int(11) NOT NULL,
   `id_video` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -40,7 +49,21 @@ CREATE TABLE IF NOT EXISTS `tb_ebooks` (
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_tb_ebooks_tb_img` (`imagem`(1000)) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Exportação de dados foi desmarcado.
+
+-- Copiando estrutura para tabela db_miria.tb_eventos
+CREATE TABLE IF NOT EXISTS `tb_eventos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
+  `descricao` text NOT NULL,
+  `nome_imagem` varchar(255) NOT NULL,
+  `data_evento` date NOT NULL,
+  `localizacao` varchar(100) NOT NULL,
+  `data_cadastro` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -49,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `tb_img` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `img` blob NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -75,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
   `data_cadastro` datetime NOT NULL,
   `ativo` char(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
