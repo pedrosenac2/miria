@@ -186,7 +186,7 @@ include '../config/controle-sessao.php';
 										<a href="../config/logout.php">Sair</a>
 									</li>
 									<li>
-										<a href="#">Esqueci a senha</a>
+										<a href="../pages/esqueceusenha.html">Esqueci a senha</a>
 									</li>
 									<li>
 										<a href="../config/usuarios.php">Listar Usuarios do Sistema</a>
@@ -228,10 +228,10 @@ include '../config/controle-sessao.php';
 					<!-- Header actions start -->
 					<ul class="header-actions">
 						<li class="dropdown d-none d-sm-block">
-							<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+							<!-- <a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
 								<i class="icon-calendar1"></i>
 							</a>
-							<div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
+							 <div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
 								<div class="dropdown-menu-header">
 									Eventos (10)
 								</div>
@@ -349,7 +349,7 @@ include '../config/controle-sessao.php';
 										</a>
 									</li>
 								</ul>
-							</div>
+							</div> -->
 						</li>
 						<li class="dropdown user-settings">
 							<a href="#" id="userSettings" data-toggle="dropdown" aria-haspopup="true">
@@ -397,9 +397,14 @@ include '../config/controle-sessao.php';
 								<textarea id="descricao" name="descricao" required></textarea>
 							</div>
 							<div class="form-group">
+								<label for="video">URL video:</label>
+								<textarea id="video" name="video" required></textarea>
+							</div>
+							<div class="form-group">
 								<label for="imagem">Imagem:</label>
 								<input type="file" id="imagem" name="imagem" accept="image/*" required>
 							</div>
+							
 							<div class="form-group">
 								<button type="submit">Enviar</button>
 							</div>

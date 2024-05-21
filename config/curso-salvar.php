@@ -3,6 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $nome = $_POST["nome"];
     $descricao = $_POST["descricao"];
+    $video = $_POST["video"];
     $id = $_POST["id"];
     $id_img = $_POST["id_img"];
 
@@ -15,9 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         include "conexao.php";
 
         // Atualiza o nome e a descrição na tabela tb_curso
-        $stmt = $conn->prepare("UPDATE tb_curso SET nome = :nome, descricao = :descricao WHERE id = :id");
+        $stmt = $conn->prepare("UPDATE tb_curso SET nome = :nome, descricao = :descricao, video = :video WHERE id = :id");
         $stmt->bindParam(":nome", $nome);
         $stmt->bindParam(":descricao", $descricao);
+        $stmt->bindParam(":video", $video);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
 

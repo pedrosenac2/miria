@@ -69,10 +69,9 @@ if (isset($_GET['id'])) {
 
             <div class="col-md-6">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="760" height="515" src="https://www.youtube.com/embed/YOGe4y9Bf1E?si=aXH7ilvLE7JM9H-x"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                    <div class="video-iframe">
+                        <?= $cursoEspecifico['video'] ?>
+                    </div>
                 </div>
             </div>
         </div>
