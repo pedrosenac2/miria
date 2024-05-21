@@ -164,9 +164,14 @@ include '../config/controle-sessao.php';
 								<textarea id="descricao" name="descricao" required></textarea>
 							</div>
 							<div class="form-group">
+								<label for="video">URL video:</label>
+								<textarea id="video" name="video" required></textarea>
+							</div>
+							<div class="form-group">
 								<label for="imagem">Imagem:</label>
 								<input type="file" id="imagem" name="imagem" accept="image/*" required>
 							</div>
+							
 							<div class="form-group">
 								<button type="submit">Enviar</button>
 							</div>

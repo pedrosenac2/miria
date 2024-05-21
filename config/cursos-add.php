@@ -3,6 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['nome'];
     $desc = $_POST['descricao'];
+    $video = $_POST['video'];
     
     try {
         //code...
@@ -30,13 +31,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $last_id = $conn->lastInsertId();
 
             // Prepara a consulta SQL
-            $sql = "INSERT INTO tb_curso (nome, descricao, id_img) VALUES (:nome, :descricao, :id_img)";
+            $sql = "INSERT INTO tb_curso (nome, descricao, id_img, video) VALUES (:nome, :descricao, :id_img, :video)";
             $stmt = $conn->prepare($sql);
 
             // Associa os parâmetros
             $stmt->bindParam(':nome', $name);
             $stmt->bindParam(':descricao', $desc);
             $stmt->bindParam(':id_img', $last_id);
+            $stmt->bindParam(':video', $video);
 
             // Executa a consulta
             $stmt->execute();

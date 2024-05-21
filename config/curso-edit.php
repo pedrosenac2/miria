@@ -47,6 +47,12 @@ try {
               value="<?php echo htmlspecialchars($row['descricao']); ?> " id="descricao" required>
           </div>
 
+          <div class="mb-3 mt-3">
+            <label for="descricao" class="form-label">Video</label><br>
+            <input type="text" name="video" class="form-control"
+              value="<?php echo htmlspecialchars($row['video']); ?> " id="video" required>
+          </div>
+
           <input type="hidden" id="id_img" name="id_img" value="<?php echo htmlspecialchars($row['id_img']) ?>">
           <div class="mb-3">
             <label for="imagem" class="mb-3">Imagem:</label><br>
