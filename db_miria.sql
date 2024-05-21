@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `tb_eventos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(100) NOT NULL,
   `descricao` text NOT NULL,
-  `nome_imagem` varchar(255) NOT NULL,
+  `imagem` LONGBLOB NOT NULL,
   `data_evento` date NOT NULL,
   `localizacao` varchar(100) NOT NULL,
   `data_cadastro` timestamp NOT NULL DEFAULT current_timestamp(),
