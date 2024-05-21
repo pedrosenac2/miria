@@ -36,6 +36,9 @@
             <div class="sidebar-submenu">
                 <ul>
                     <li>
+                        <a href="gerenciarEvento.php">Gerenciar seus eventos</a>
+                    </li>
+                    <li>
                         <a href="cadastroEvento.php">Cadastrar seus eventos</a>
                     </li>
                 </ul>

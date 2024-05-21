@@ -331,7 +331,7 @@ include '../config/controle-sessao.php';
                     }
                     ?>
                     <div class="container">
-                        <form action="../config/cadastro-evento.php" method="post" enctype="multipart/form-data">
+                        <form action="../config/evento-add.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="titulo">Nome do Evento (participado ou realizado):</label>
                                 <input type="text" id="titulo" name="titulo" required>
