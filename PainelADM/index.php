@@ -391,7 +391,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 								<div class="col-md-6">
 									<div class="card" style="width: 38rem;">
 										<?php
-										echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '"style="width:100%; height:100%;">';
+										echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['imagem']) . '"style="width:100%; max-height:300px; object-fit:cover; margin-bottom:15px;">';
 										?>
 										<div class="card-body">
 											<h5 class="card-title">
