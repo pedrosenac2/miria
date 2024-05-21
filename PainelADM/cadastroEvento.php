@@ -333,8 +333,8 @@ include '../config/controle-sessao.php';
                     <div class="container">
                         <form action="../config/cadastro-evento.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="nome">Nome do Evento (participado ou realizado):</label>
-                                <input type="text" id="nome" name="nome" required>
+                                <label for="titulo">Nome do Evento (participado ou realizado):</label>
+                                <input type="text" id="titulo" name="titulo" required>
                             </div>
                             <div class="form-group">
                                 <label for="descricao">Descrição:</label>
@@ -347,6 +347,8 @@ include '../config/controle-sessao.php';
                             <div class="form-group">
                                 <label for="data_evento">Data do Evento:</label>
                                 <input type="date" id="data_evento" name="data_evento" required>
+                                <label for="horario_evento">Horário do Evento:</label>
+                                <input type="time" id="horario_evento" name="horario_evento" required>
                             </div>
                             <div class="form-group">
                                 <label for="localizacao">Localização:</label>

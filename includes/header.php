@@ -2,6 +2,9 @@
 if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_URI'], -1) == '/')) {
     ?>
 
+    <div>
+
+    </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center">
@@ -17,34 +20,37 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
         </div>
     </nav>
 
-<nav class="navbar navbar-expand-lg">
-    <ul class="navbar-nav me-auto mb-4 mb-lg-0 ">
-        <li class="nav-grid">
-            <a class="hoverLink" href="index.php">Home</a>
-        </li>
-         <li class="nav-grid">
-            <a class="hoverLink" href="pages/cursos.php">Cursos</a>
-        </li>
-        <li class="nav-grid">
-            <a class="hoverLink" href="pages/e-books.php">E-books</a>
-        </li>
-        <li class="nav-grid">
-            <a class="hoverLink" href="pages/eventos.php">Eventos</a>
-        </li>
-        <li class="nav-grid">
-            <a class="hoverLink" href="pages/contato.php">Contato</a>
-        </li>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid mb-5">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0 ">
+                    <li class="nav-grid">
+                        <a class="hoverLink" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-grid">
+                        <a class="hoverLink" href="pages/cursos.php">Cursos</a>
+                    </li>
+                    <li class="nav-grid">
+                        <a class="hoverLink" href="pages/e-books.php">E-books</a>
+                    </li>
+                    <li class="nav-grid">
+                        <a class="hoverLink" href="pages/eventos.php">Eventos</a>
+                    </li>
+                    <li class="nav-grid">
+                        <a class="hoverLink" href="pages/contato.php">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-      </ul>
-</nav>
 
 
 
-
-<?php
+    <?php
 } else {
     ?>
-     <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <div class="container d-flex flex-column">
             <div class="d-flex justify-content-between align-items-center">
                 <a class="navbar-brand fs-3" href="#">
@@ -59,26 +65,26 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
         </div>
     </nav>
 
-<nav class="navbar navbar-expand-lg">
-    <ul class="navbar-nav me-auto mb-4 mb-lg-0 ">
-        <li class="nav-grid">
-            <a class="hoverLink" href="../index.php">Home</a>
-        </li>
-         <li class="nav-grid">
-            <a class="hoverLink" href="../pages/cursos.php">Cursos</a>
-        </li>
-        <li class="nav-grid">
-            <a class="hoverLink" href="../pages/e-books.php">E-books</a>
-        </li>
-        <li class="nav-grid">
-            <a class="hoverLink" href="../pages/eventos.php">Eventos</a>
-        </li>
-        <li class="nav-grid">
-            <a class="hoverLink" href="../pages/contato.php">Contato</a>
-        </li>
+    <nav class="navbar navbar-expand-lg">
+        <ul class="navbar-nav me-auto mb-4 mb-lg-0 ">
+            <li class="nav-grid">
+                <a class="hoverLink" href="../index.php">Home</a>
+            </li>
+            <li class="nav-grid">
+                <a class="hoverLink" href="../pages/cursos.php">Cursos</a>
+            </li>
+            <li class="nav-grid">
+                <a class="hoverLink" href="../pages/e-books.php">E-books</a>
+            </li>
+            <li class="nav-grid">
+                <a class="hoverLink" href="../pages/eventos.php">Eventos</a>
+            </li>
+            <li class="nav-grid">
+                <a class="hoverLink" href="../pages/contato.php">Contato</a>
+            </li>
 
-      </ul>
-</nav>
-<?php
+        </ul>
+    </nav>
+    <?php
 }
 ?>
