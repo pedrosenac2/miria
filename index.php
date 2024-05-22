@@ -6,7 +6,8 @@ if ($conn->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conn->connect_error);
 }
 
-$query = "SELECT titulo, descricao, data_evento, localizacao, imagem FROM tb_eventos";
+$query = "SELECT tb_eventos.titulo, tb_eventos.descricao, tb_eventos.data_evento, tb_eventos.localizacao, tb_eventos.id_img, tb_img.img FROM tb_eventos INNER JOIN tb_img 
+ON tb_eventos.id_img = tb_img.id";
 $result = $conn->query($query);
 $eventos = [];
 if ($result->num_rows > 0) {
@@ -214,7 +215,7 @@ $conn->close();
                             <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
                                 <div class="nextEventsContent">
                                     <div class="eventsImg">
-                                        <img src="data:image/jpeg;base64,<?php echo base64_encode($evento['imagem']); ?>"
+                                        <img src="data:image/jpeg;base64,<?php echo base64_encode($evento['img']); ?>"
                                             class="d-block w-100" alt="">
                                     </div>
 

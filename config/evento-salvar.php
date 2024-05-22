@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         include "conexao.php";
 
-        $stmt = $conn->prepare("UPDATE tb_evento SET titulo = :titulo, descricao = :descricao, data_evento = :data_evento, horario_evento = :horario_evento, localizacao = :localizacao WHERE id = :id");
+        $stmt = $conn->prepare("UPDATE tb_eventos SET titulo = :titulo, descricao = :descricao, data_evento = :data_evento, horario_evento = :horario_evento, localizacao = :localizacao WHERE id = :id");
         $stmt->bindParam(":titulo", $titulo);
         $stmt->bindParam(":descricao", $descricao);
         $stmt->bindParam(":data_evento", $data_evento);
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         }
 
-        header("location: ../PainelADM/index.php");
+        header("location: ../PainelADM/gerenciarEvento.php");
 
     } catch (Exception $e) {
         echo "Erro: " . $e->getMessage();

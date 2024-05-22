@@ -301,7 +301,7 @@ $dados_eventos = $stmt_eventos->fetchAll(PDO::FETCH_ASSOC);
 				<!-- Card dos Eventos -->
 				<center>
 					<div class="titulo">
-						<h1 class="text-start">Seus Eventos</h1>
+						<h1 class="text-start">Seus próximos eventos</h1>
 						<div class="row" style="margin-top: 50px;">
 							<?php
 							foreach ($dados_eventos as $row) {
