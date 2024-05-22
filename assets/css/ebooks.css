@@ -17,6 +17,7 @@
     --weight2: 400;
     --weight3: 600;
 }
+
 /* Webhost */
 .blank {
     width: 400px;
@@ -430,25 +431,32 @@
 .curso{
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px;
     height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .link-curso{
     text-decoration: none;
     padding: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-curso:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 25px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.link-curso:hover .curso {
+    box-shadow: none;
 }
 
 .link-curso a{
     text-decoration: none;
-}
-
-.link-curso:hover{
-    text-decoration: none;
-    transform: scale(1.05);
-    transition: all .4s ease-in-out;
 }
 
 .link-curso:nth-child(n+10){
@@ -466,12 +474,9 @@
     flex-grow: 1;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 15px;
     color: #000;
-    font-family: Inter;  
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    text-align: center;
 }
 
 .search{
@@ -481,7 +486,6 @@
 }
 
 .searchbar{
-    /* width: 95%; */
     padding: 6px 14px !important;
     font-size: 16px !important;
     border: none !important;

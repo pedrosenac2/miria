@@ -7,8 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     try {
         //code...
-        if (empty($name) || empty($desc)) {
-            throw new Exception('Erro, nome e descrição não podem ser Vazios!!');
+        if (empty($name) || empty($desc) || empty($video)){
+            throw new Exception(' nome, descrição e video não podem ser vazios!!');
         }
         
         include "conexao.php";

@@ -1,12 +1,19 @@
 <?php
 include('../config/conexao.php');
 
+$ebooks = [];
+
 if (isset($_GET['id'])) {
     $ebook_id = $_GET['id'];
     $sql_ebooks = "SELECT * FROM tb_ebooks WHERE id = :id";
     $stmt_ebooks = $conn->prepare($sql_ebooks);
     $stmt_ebooks->execute([':id' => $ebook_id]);
     $ebookEspecifico = $stmt_ebooks->fetch(PDO::FETCH_ASSOC);
+
+    $sql_recomendados = "SELECT * FROM tb_ebooks WHERE id != :id LIMIT 3";
+    $stmt_recomendados = $conn->prepare($sql_recomendados);
+    $stmt_recomendados->execute([':id' => $ebook_id]);
+    $ebooks = $stmt_recomendados->fetchAll(PDO::FETCH_ASSOC);
 } else {
     echo "ID do ebook não encontrado.";
     exit;
@@ -54,7 +61,7 @@ if (isset($_GET['id'])) {
             <div class="col-md-6">
                 <div class="embed-responsive embed-responsive-16by9">
                     <?php
-                    echo '<img class="card-img" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebookEspecifico['imagem']) . '" style="width:100%; max-height:300px; object-fit:cover; margin-bottom:15px;">'
+                    echo '<img class="card-img" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebookEspecifico['imagem']) . '" style="width:100%; max-height:400px; object-fit:cover; margin-bottom:15px;">'
                     ?>
                 </div>
             </div>
@@ -72,33 +79,29 @@ if (isset($_GET['id'])) {
 
     <div class="container">
         <h2 class="text-center mb-5">Você também pode gostar desses livros</h2>
-        <div class="row">
-            <div class="col-sm">
-                <p class="text-center mt-3" style="font-weight: bold;">Viagem no Tempo</p>
-                <a href="#"><img src="../assets/img/img_conteudo/book.jpg" alt="Livro 1" style="width: 200px;"
-                        class="mx-auto d-block mb-4"></a>
-                <p>Em “Ecos do Amanhã”, um físico brilhante descobre acidentalmente uma maneira de viajar no tempo. Ele
-                    decide usar essa habilidade para corrigir erros do passado, mas logo percebe que cada ação tem
-                    consequências inesperadas que alteram o futuro de maneiras surpreendentes.</p>
-            </div>
-            <div class="col-sm">
-                <p class="text-center mt-3" style="font-weight: bold;">Mistério Sobrenatural</p>
-                <a href="#"><img src="../assets/img/img_conteudo/book.jpg" alt="Livro 2" style="width: 200px;"
-                        class="mx-auto d-block mb-4"></a>
-                <p>“A Casa das Almas Perdidas” segue a história de uma família que se muda para uma antiga mansão,
-                    apenas para descobrir que ela é habitada por espíritos do passado. À medida que os mistérios da casa
-                    se desdobram, eles devem desvendar a história trágica dos antigos moradores para trazer paz aos
-                    espíritos inquietos.</p>
-            </div>
-            <div class="col-sm">
-                <p class="text-center mt-3" style="font-weight: bold;">Aventura Espacial</p>
-                <a href="#"><img src="../assets/img/img_conteudo/book.jpg" alt="Livro 3" style="width: 200px;"
-                        class="mx-auto d-block mb-4"></a>
-                <p>“Estrelas Além do Infinito” conta a história de uma tripulação de exploradores espaciais que se
-                    deparam com um planeta desconhecido habitado por uma civilização alienígena avançada. Enfrentando
-                    desafios e descobrindo maravilhas além da imaginação, eles devem navegar por intrigas
-                    intergalácticas e perigos desconhecidos para fazer contato pacífico.</p>
-            </div>
+        <div class="row list-curso">
+        <?php foreach($ebooks as $ebook){ ?> 
+                
+                <div class="col-md-6 link-curso">    
+                    <a href="ebookEspecifico.php?id=<?php echo $ebook['id']; ?>">
+                        <div class="curso">
+                            <div class="img-curso">
+                                <?php
+                                    echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; height:100%; object-fit:cover; margin-bottom:15px;">';
+                                ?>
+                            </div>
+                            <div class="txt-curso">
+                                <div>
+                                    <h3><?php echo $ebook["nome"] ?></h3>
+                                </div>
+                                <div>
+                                    <p><?php echo $ebook["descricao"] ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <?php } ?>
         </div>
     </div>
 

@@ -229,6 +229,73 @@ input[type="submit"]:hover {
     width: 40px;
 }
 
+.curso{
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px;
+    height: 300px;
+}
+
+.link-curso{
+    text-decoration: none;
+}
+
+.link-curso a{
+    text-decoration: none;
+}
+
+.img-curso{
+    width: 60%;
+    height: 100%;
+}
+
+.txt-curso{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: #000;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+}
+
+.list-curso {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+    .list-curso{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-curso{
+        width: 70%;
+    }
+
+    .curso{
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .img-curso{
+        width: 100%;
+        height: 200px;
+    }
+
+    .txt-curso{
+        width: 100%;
+    }
+}
+
+
 /* Fim */
 
 

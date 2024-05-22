@@ -90,35 +90,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="departamento">Departamento:</label>
-                <input type="text" name="departamento">
+                <input type="text" name="departamento" class="form-control">
             </div>
             <div class="form-group">
                 <label for="cargo">Cargo:</label>
-                <input type="text" name="cargo">
+                <input type="text" name="cargo" class="form-control">
             </div>
             <div class="form-group">
                 <label for="telefone">Telefone:</label>
-                <input type="tel" name="telefone">
+                <input type="tel" name="telefone" class="form-control">
             </div>
             <div class="form-group">
                 <label for="empresa">Empresa:</label>
-                <input type="text" name="empresa">
+                <input type="text" name="empresa" class="form-control">
             </div>
             <div class="form-group">
                 <label for="colaboradores">Número Aproximado de Colaboradores:</label>
-                <input type="number" name="colaboradores">
+                <input type="number" name="colaboradores" class="form-control">
             </div>
             <div class="form-group">
                 <label for="area_atuacao">Área de Atuação:</label>
-                <input type="text" name="area_atuacao">
+                <input type="text" name="area_atuacao" class="form-control">
             </div>
             <div class="form-group">
                 <label for="mensagem">Deixe uma mensagem:</label>
-                <textarea name="mensagem"></textarea>
+                <textarea name="mensagem" class="form-control"></textarea>
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" id="aceita_termos" class="form-check-input" required>
