@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $stmt_ebooks->execute([':id' => $ebook_id]);
     $ebookEspecifico = $stmt_ebooks->fetch(PDO::FETCH_ASSOC);
 
-    $sql_recomendados = "SELECT * FROM tb_ebooks WHERE id != :id LIMIT 3";
+    $sql_recomendados = "SELECT * FROM tb_ebooks WHERE id != :id LIMIT 2";
     $stmt_recomendados = $conn->prepare($sql_recomendados);
     $stmt_recomendados->execute([':id' => $ebook_id]);
     $ebooks = $stmt_recomendados->fetchAll(PDO::FETCH_ASSOC);

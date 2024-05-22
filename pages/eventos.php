@@ -1,3 +1,16 @@
+<?php
+
+include '../config/conexao.php';
+
+$sql = "SELECT tb_galeria.id, tb_img.img 
+FROM tb_galeria 
+INNER JOIN tb_img 
+ON tb_galeria.id_img = tb_img.id";
+$stmt = $conn->query($sql);
+$imagens = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,26 +60,15 @@
             <h2>Eventos Realizados</h2>
             <div class="galeria">
                 <ul class="imagem-galeria">
+                    <?php
+                        foreach ($imagens as $imagem) {
+                    ?>
                     <li>
-                        <a href="../assets/img/img_banner/banner2.jpg" alt="Imagem 1" class="carousel-image" data-fancybox="galeria">
-                            <img src="../assets/img/img_banner/banner2.jpg" alt="Imagem 1" class="carousel-image" alt="Imagem galeria 1">
+                        <a href="data:image/jpeg;base64,<?= base64_encode($imagem['img']) ?>" alt="Imagem 1" class="carousel-image" data-fancybox="galeria">
+                            <img src="data:image/jpeg;base64,<?= base64_encode($imagem['img']) ?>" class="carousel-image" alt="Card Imagem">
                         </a>
                     </li>
-                    <li>
-                        <a href="../assets/img/img_banner/banner1.jpg" alt="Imagem 2" data-fancybox="galeria">
-                            <img src="../assets/img/img_banner/banner1.jpg" alt="Imagem 2" alt="Imagem galeria 2">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../assets/img/img_banner/banner3.jpg" data-fancybox="galeria">
-                            <img src="../assets/img/img_banner/banner3.jpg" alt="Imagem galeria 3">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../assets/img/img_banner/banner4.jpg" data-fancybox="galeria">
-                            <img src="../assets/img/img_banner/banner4.jpg" alt="Imagem galeria 4">
-                        </a>
-                    </li>
+                    <?php } ?>		
                 </ul>
             </div>
         </div>

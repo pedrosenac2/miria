@@ -11,6 +11,13 @@ ON tb_eventos.id_img = tb_img.id";
 $stmt_eventos = $conn->query($sql_eventos);
 $dados_eventos = $stmt_eventos->fetchAll(PDO::FETCH_ASSOC);
 
+$sql_galeria = "SELECT tb_galeria.id, tb_galeria.id_img, tb_img.img 
+FROM tb_galeria
+INNER JOIN tb_img 
+ON tb_galeria.id_img = tb_img.id";
+$stmt_galeria = $conn->query($sql_galeria);
+$dados_galeria = $stmt_galeria->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -350,13 +357,22 @@ $dados_eventos = $stmt_eventos->fetchAll(PDO::FETCH_ASSOC);
 												echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($row['img']) . '"style="width:100%; height:100%;">';
 												?>
 											</div>
-											<div class="col-md-6">
-												<h2>
-													<?= $row['titulo'] ?>
-												</h2>
-												<p>
-													<?= $row['descricao'] ?>
-												</p>
+											<div class="modal-flex col-md-6">
+												<div>
+													<h2>
+														<?= $row['titulo'] ?>
+													</h2>
+													<p>
+														<?= $row['descricao'] ?>
+													</p>
+												</div>
+												<div>
+													<h4>
+														<?= $row['localizacao'] ?>
+													</h4>
+													<h5>Data: <?= $row['data_evento'] ?></h5>
+													<h5>Hora: <?= $row['horario_evento'] ?></h5>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -371,6 +387,30 @@ $dados_eventos = $stmt_eventos->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 						</div>
 					<?php } ?>
+
+					<div class="titulo">
+						<h1 class="text-start">Fotos dos eventos</h1>
+						<div id="row-galeria" class="row" style="margin-top: 50px;">
+							<?php
+								foreach ($dados_galeria as $row) {
+							?>
+								<div class="col-md-6">
+									<div class="add-image" style="width: 38rem;">
+										<img style="width:100%; max-height:300px; object-fit:cover; border-radius:15px;" src="data:image/jpeg;base64,<?= base64_encode($row['img']) ?>" alt="Card Imagem">
+										<span class="delete-icon" onclick="deleteImage(<?= $row['id'] ?>)"><i class="fa-solid fa-xmark"></i></span>
+									</div>
+								</div>
+							<?php } ?>
+							<div class="col-md-6">
+								<form id="upload-form" action="../config/imgEvent-add.php" method="post" enctype="multipart/form-data">
+									<div class="add-image" style="width: 38rem;">
+										<input type="file" id="imagem" name="imagem" accept="image/*">
+										<label for="imagem" class="add-icon"><img src="img/mais.png" alt=""></label>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 
 				</center>
 			</div>
@@ -436,6 +476,8 @@ $dados_eventos = $stmt_eventos->fetchAll(PDO::FETCH_ASSOC);
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
 		integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
 		crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/2eeb56781b.js" crossorigin="anonymous"></script>
+	<script src="js/imgEvent.js"></script>
 
 </body>
 
