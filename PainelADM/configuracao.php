@@ -43,25 +43,28 @@
 			</div>
 			<!-- Sidebar brand end  -->
 
-			<!-- Quick links start -->
+			<!-- User profile start -->
 			<div class="sidebar-user-details">
 				<div class="user-profile">
-					<img src="img/user2.png" class="profile-thumb" alt="Admin Dashboards">
+					<img src="../assets/img/mm.jpg" class="profile-thumb" alt="Admin Dashboards">
 					<span class="status-label"></span>
 				</div>
-				<h6 class="profile-name">Yuki Hayashi</h6>
+				<h6 class="profile-name">Miriã Maugé</h6>
 				<div class="profile-actions">
-					<a href="account-settings.html" class="blue-bg" data-toggle="tooltip" data-placement="top" title=""
-						data-original-title="Settings">
+					<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
 						<i class="icon-settings1"></i>
 					</a>
-					<a href="login.html" class="red-bg" data-toggle="tooltip" data-placement="top" title=""
-						data-original-title="Logout">
+					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title=""
+						data-original-title="X">
+						<i class="icon-twitter1"></i>
+					</a>
+					<a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
+						data-original-title="Sair">
 						<i class="icon-power1"></i>
 					</a>
 				</div>
 			</div>
-			<!-- Quick links end -->
+			<!-- User profile end -->
 
 			<!-- Sidebar content start -->
 			<div class="sidebar-content">
@@ -108,15 +111,18 @@
 								<div class="account-settings">
 									<div class="user-profile">
 										<div class="user-avatar">
-											<img src="img/user2.png" alt="Admin Templates and Dashboards" />
+											<img src="../assets/img/mm.jpg" alt="Admin Templates and Dashboards" />
 										</div>
 										<h5 class="user-name">Nome Usuario</h5>
 										<h6 class="user-email">emailusuario@gmail.com</h6>
 									</div>
 									<div class="about">
 										<h5>Sobre</h5>
-										<p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and
-											human experiences.
+										<p>Miriã Maugé é uma visionária que acredita no poder transformador do
+											conhecimento e na capacidade intrínseca de cada indivíduo para alcançar seu
+											máximo potencial. Com formação em psicologia e anos de experiência em
+											coaching e consultoria, Miriã traz uma abordagem holística para o
+											desenvolvimento humano, integrando mente, corpo e espírito.
 										</p>
 									</div>
 								</div>
@@ -156,7 +162,7 @@
 									</div>
 									<div class="col-sm-6 col-12">
 										<div class="form-group">
-											<label for="Street">Street</label>
+											<label for="Street">Rua</label>
 											<input type="name" class="form-control" id="Street"
 												placeholder="Enter Street">
 										</div>
@@ -166,9 +172,9 @@
 									<div class="col-sm-12">
 										<div class="text-right">
 											<button type="button" id="submit" name="submit"
-												class="btn btn-secondary">Cancel</button>
+												class="btn btn-secondary">Cancelar</button>
 											<button type="button" id="submit" name="submit"
-												class="btn btn-primary">Update</button>
+												class="btn btn-primary">Atualizar</button>
 										</div>
 									</div>
 								</div>

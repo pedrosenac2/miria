@@ -10,111 +10,15 @@
 				</div>
 				<div class="header-items">
 					<!-- Custom search start -->
-					<div class="custom-search">
+					<!-- <div class="custom-search">
 						<input type="text" class="search-query" placeholder="Search here ...">
 						<i class="icon-search1"></i>
-					</div>
+					</div> -->
 					<!-- Custom search end -->
 
 					<!-- Header actions start -->
 					<ul class="header-actions">
 						<li class="dropdown d-none d-sm-block">
-							<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
-								<i class="icon-calendar1"></i>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
-								<div class="dropdown-menu-header">
-									Eventos (10)
-								</div>
-								<ul class="header-notifications">
-									<li>
-										<a href="#">
-											<div class="user-img away">
-												<img src="img/user6.png" alt="Admin Template">
-											</div>
-											<div class="details">
-												<div class="user-title">Evento 1</div>
-												<div class="noti-details">Membership has been ended.</div>
-												<div class="noti-date">Today, 07:30 pm</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="user-img busy">
-												<img src="img/user13.png" alt="Premium Admin Dashboards">
-											</div>
-											<div class="details">
-												<div class="user-title">Evento 2</div>
-												<div class="noti-details">Approved new design.</div>
-												<div class="noti-date">Today, 12:00 am</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="user-img online">
-												<img src="img/user19.png" alt="Premium Admin Dashboards">
-											</div>
-											<div class="details">
-												<div class="user-title">Evento 3</div>
-												<div class="noti-details">Check out every table in detail.</div>
-												<div class="noti-date">Today, 04:00 pm</div>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="dropdown d-none d-sm-block">
-							<a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
-								<i class="icon-bell"></i>
-								<span class="count-label"></span>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
-								<div class="dropdown-menu-header">
-									Notificações (40)
-								</div>
-								<ul class="header-notifications">
-									<li>
-										<a href="#">
-											<div class="user-img away">
-												<img src="img/user10.png" alt="Bootstrap Admin Panel">
-											</div>
-											<div class="details">
-												<div class="user-title">Pessoa 1</div>
-												<div class="noti-details">Membership has been ended.</div>
-												<div class="noti-date">Today, 07:30 pm</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="user-img busy">
-												<img src="img/user10.png" alt="Admin Panel">
-											</div>
-											<div class="details">
-												<div class="user-title">Pessoa 2</div>
-												<div class="noti-details">Approved new design.</div>
-												<div class="noti-date">Today, 12:00 am</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="user-img online">
-												<img src="../assets/img/mm.jpg" alt="Admin Template">
-											</div>
-											<div class="details">
-												<div class="user-title">Pessoa 3</div>
-												<div class="noti-details">Check out every table in detail.</div>
-												<div class="noti-date">Today, 04:00 pm</div>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</li>
 						<li class="dropdown user-settings">
 							<a href="#" id="userSettings" data-toggle="dropdown" aria-haspopup="true">
 								<img src="../assets/img/mm.jpg" class="user-avatar" alt="Top Admin Dashboards">

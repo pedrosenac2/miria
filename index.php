@@ -168,48 +168,19 @@ $conn->close();
 
     <!-- acaba o carrosel aqui -->
 
-    <div class="conteudo">
-        <h1>Conduzindo você em:</h1>
-        <h1>Autoconhecimento, propósito e sucesso profissional.</h1>
+    <!-- <div class="container">
+        <div class="nextEvents">
+            <h2>Cursos em Destaque</h2>
 
-        <p style="font-size: 30px;">Descubra quem você é, seu propósito e transforme sua carreira.</p>
-    </div>
-    <div class="row1-container">
-        <div class="box box-down cyan">
-            <h2 class="text-center">Encontre-se</h2>
-            <p>Aprenda a se conhecer melhor, a descobrir o seu propósito de vida e a transformar a sua carreira com os
-                nossos métodos exclusivos.</p>
-            <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
         </div>
-
-        <div class="box red">
-            <h2 class="text-center">Transforme-se</h2>
-            <p>Você sabe quem você é, o que você quer e como você pode chegar lá ? Nós te ajudamos a responder essas
-                perguntas e a mudar a sua carreira para melhor.</p>
-            <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
-        </div>
-
-        <div class="box box-down blue">
-            <h2 class="text-center">Mude</h2>
-            <p>Conecte-se com o seu propósito e mude a sua carreira com a nossa orientação profissional.</p>
-            <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
-        </div>
-    </div>
-    <div class="row2-container mt-5 mb-4">
-        <div class="box orange">
-            <h2 class="text-center">Revele</h2>
-            <p>Revele a sua verdadeira identidade, alinhe o seu propósito com a sua carreira e cresça profissionalmente
-                com o nosso acompanhamento personalizado.</p>
-            <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
-        </div>
-    </div>
+    </div> -->
 
     <!-- Eventos -->
-    <div class="container">
+    <div class="container" style="margin-top: 40px;">
         <div class="nextEvents">
             <h2>Próximos Eventos</h2>
             <div class="event-section">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  style="height: 100%;">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="height: 100%;">
                     <div class="carousel-inner">
                         <?php foreach ($eventos as $index => $evento): ?>
                             <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
