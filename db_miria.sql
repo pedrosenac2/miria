@@ -46,10 +46,11 @@ CREATE TABLE IF NOT EXISTS `tb_ebooks` (
   `nome` varchar(50) NOT NULL,
   `descricao` varchar(250) NOT NULL,
   `imagem` blob NOT NULL,
+  `pdf` longblob NOT NULL,
   `data_cadastro` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_tb_ebooks_tb_img` (`imagem`(1000)) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 

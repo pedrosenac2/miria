@@ -175,6 +175,10 @@
 								<input type="file" id="imagem" name="imagem" accept="image/*" required>
 							</div>
 							<div class="form-group">
+								<label for="imagem">Arquivo PDF:</label>
+								<input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
+							</div>
+							<div class="form-group">
 								<button type="submit">Enviar</button>
 							</div>
 						</form>

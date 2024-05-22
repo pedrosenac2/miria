@@ -61,18 +61,23 @@ if (isset($_GET['id'])) {
             <div class="col-md-6">
                 <div class="embed-responsive embed-responsive-16by9">
                     <?php
-                    echo '<img class="card-img" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebookEspecifico['imagem']) . '" style="width:100%; max-height:400px; object-fit:cover; margin-bottom:15px;">'
+                    echo '<img class="card-img" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebookEspecifico['imagem']) . '" style="width:100%; max-height:400px; object-fit:cover;">'
                     ?>
                 </div>
             </div>
             <div class="col-md-6">
-                <h1 class="text-center">
-                    <?= $ebookEspecifico['nome'] ?>
-                </h1>
-                <h3 class="text-start mb-3 mt-5 color-blue">Sinopse</h3>
-                <p>
-                    <?= $ebookEspecifico['descricao'] ?>
-                </p>
+                <div class="specificEbookText">
+                    <div>
+                        <h1 class="text-center">
+                            <?= $ebookEspecifico['nome'] ?>
+                        </h1>
+                        <h3 class="text-start mb-3 mt-5 color-blue">Sinopse</h3>
+                        <p>
+                            <?= $ebookEspecifico['descricao'] ?>
+                        </p>
+                    </div>
+                    <a href="baixar_pdf.php?id=<?php echo $ebook['pdf']; ?>" class="btn btn-primary"">Baixar PDF</a>
+                </div>
             </div>
         </div>
     </div>
@@ -80,28 +85,28 @@ if (isset($_GET['id'])) {
     <div class="container">
         <h2 class="text-center mb-5">Você também pode gostar desses livros</h2>
         <div class="row list-curso">
-        <?php foreach($ebooks as $ebook){ ?> 
-                
-                <div class="col-md-6 link-curso">    
-                    <a href="ebookEspecifico.php?id=<?php echo $ebook['id']; ?>">
-                        <div class="curso">
-                            <div class="img-curso">
-                                <?php
-                                    echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; height:100%; object-fit:cover; margin-bottom:15px;">';
-                                ?>
-                            </div>
-                            <div class="txt-curso">
-                                <div>
-                                    <h3><?php echo $ebook["nome"] ?></h3>
+            <?php foreach($ebooks as $ebook){ ?> 
+                    
+                    <div class="col-md-6 link-curso">    
+                        <a href="ebookEspecifico.php?id=<?php echo $ebook['id']; ?>">
+                            <div class="curso">
+                                <div class="img-curso">
+                                    <?php
+                                        echo '<img class="card-img-top" alt="Card Imagem" src="data:image/jpeg;base64,' . base64_encode($ebook['imagem']) . '" style="width:100%; height:100%; object-fit:cover; margin-bottom:15px;">';
+                                    ?>
                                 </div>
-                                <div>
-                                    <p><?php echo $ebook["descricao"] ?></p>
+                                <div class="txt-curso">
+                                    <div>
+                                        <h3 class="text-center"><?php echo $ebook["nome"] ?></h3>
+                                    </div>
+                                    <div>
+                                        <p><?php echo $ebook["descricao"] ?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <?php } ?>
+                        </a>
+                    </div>
+                    <?php } ?>
         </div>
     </div>
 
