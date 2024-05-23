@@ -46,6 +46,7 @@ $conn->close();
 </head>
 
 <body>
+    <div id="container-index">
 
     <?php
     include_once 'includes/header.php';
@@ -231,13 +232,8 @@ $conn->close();
     <?php
     include ('includes/footer.php');
     ?>
+    </div>
     <!-- fim footer -->
-
-
-    <!-- 
-    <div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;">
-        <a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a>
-    </div> -->
 
     <!-- JS -->
     <script type="text/javascript" src="assets/js/scripts.js"></script>
@@ -255,5 +251,4 @@ $conn->close();
         crossorigin="anonymous"></script>
 
 </body>
-
 </html>

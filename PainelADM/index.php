@@ -96,13 +96,13 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 				</div>
 				<h6 class="profile-name">Miriã Maugé</h6>
 				<div class="profile-actions">
-					<a href="configuracao.php" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
+					<!-- <a href="configuracao.php" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
 						<i class="icon-settings1"></i>
 					</a>
 					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="X">
 						<i class="icon-twitter1"></i>
-					</a>
+					</a> -->
 					<a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Sair">
 						<i class="icon-power1"></i>
@@ -115,7 +115,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 			<div class="sidebar-content">
 
 				<!-- Sidebar content start -->
-				<?php include '../config/menu_lateral.php'; ?>
+				<?php include 'includes/menu_lateral.php'; ?>
 				<!-- Sidebar content end -->
 
 			</div>
@@ -129,7 +129,7 @@ $stmt_ebooks = $conn->query($sql_ebooks);
 
 		<!-- Header -->
 		<?php 
-		include '../config/header.php';
+		include 'includes/header.php';
 		?>
 		<!-- fim -->
 

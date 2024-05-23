@@ -25,6 +25,10 @@
     width: 400px;
 }
 
+body{
+    margin-bottom: 0;
+}
+
 /* nav-bar */
 
 .navbar-nav {
@@ -229,19 +233,19 @@ input[type="submit"]:hover {
     width: 40px;
 }
 
-.specificEbookText{
+.specificEbookText {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
 
-.specificEbookText a{
+.specificEbookText a {
     width: 150px;
 }
 
 
-.curso{
+.curso {
     display: flex;
     border-radius: 5px;
     overflow: hidden;
@@ -249,20 +253,20 @@ input[type="submit"]:hover {
     height: 300px;
 }
 
-.link-curso{
+.link-curso {
     text-decoration: none;
 }
 
-.link-curso a{
+.link-curso a {
     text-decoration: none;
 }
 
-.img-curso{
+.img-curso {
     width: 60%;
     height: 100%;
 }
 
-.txt-curso{
+.txt-curso {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -278,28 +282,28 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 1200px) {
-    .list-curso{
+    .list-curso {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .link-curso{
+    .link-curso {
         width: 70%;
     }
 
-    .curso{
+    .curso {
         flex-direction: column;
         height: auto;
         margin-bottom: 15px;
     }
 
-    .img-curso{
+    .img-curso {
         width: 100%;
         height: 200px;
     }
 
-    .txt-curso{
+    .txt-curso {
         width: 100%;
     }
 }
@@ -345,7 +349,7 @@ input[type="submit"]:hover {
     gap: 10px;
 }
 
-.nextEvents p{
+.nextEvents p {
     font-size: 35px;
 }
 
@@ -420,12 +424,14 @@ input[type="submit"]:hover {
     border-radius: 5px;
 }
 
-.video-iframe{
+.video-iframe {
     width: 760px;
     height: 515px;
 }
 
-.video-iframe iframe{
+.video-iframe iframe {
     width: 100%;
     height: 100%;
 }
+
+/* footer */

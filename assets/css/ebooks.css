@@ -410,6 +410,10 @@
 
 .container{
     width: 100%;
+
+}
+.container-ebook{
+    min-height: 50vh;
 }
 
 .ebook-filter{

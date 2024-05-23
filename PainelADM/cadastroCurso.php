@@ -80,11 +80,11 @@ include '../config/controle-sessao.php';
 <body>
 
 	<!-- Loading starts -->
-	<div id="loading-wrapper">
+	<!-- <div id="loading-wrapper">
 		<div class="spinner-border" role="status">
 			<span class="sr-only">Carregando...</span>
 		</div>
-	</div>
+	</div> -->
 	<!-- Loading ends -->
 
 	<!-- Page wrapper start -->
@@ -112,13 +112,13 @@ include '../config/controle-sessao.php';
 				</div>
 				<h6 class="profile-name">Miriã Maugé</h6>
 				<div class="profile-actions">
-					<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
+					<!-- <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Configurações">
 						<i class="icon-settings1"></i>
 					</a>
 					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="X">
 						<i class="icon-twitter1"></i>
-					</a>
+					</a> -->
 					<a href="../config/logout.php" class="red" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Sair">
 						<i class="icon-power1"></i>
@@ -128,7 +128,7 @@ include '../config/controle-sessao.php';
 			<!-- User profile end -->
 
 			<!-- Sidebar content start -->
-			<?php include '../config/menu_lateral.php'; ?>
+			<?php include 'includes/menu_lateral.php'; ?>
 			<!-- Sidebar content end -->
 
 		</nav>
@@ -139,7 +139,7 @@ include '../config/controle-sessao.php';
 
 		<!-- Header -->
 		<?php 
-		include '../config/header.php';
+		include 'includes/header.php';
 		?>
 		<!-- fim -->
 

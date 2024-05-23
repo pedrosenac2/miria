@@ -43,7 +43,7 @@
     include('../includes/header.php');
     ?>
 
-    <div class="container">
+    <div class="container container-ebook">
         <div class="row">
             <div class="col-md-16">
                 <h1 class="text-center title">Cursos</h1>

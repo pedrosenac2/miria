@@ -32,8 +32,8 @@
 										<h5>Miriã Maugé</h5>
 										<p>ADM</p>
 									</div>
-									<a href="perfil.php"><i class="icon-user1"></i>Perfil</a>
-									<a href="configuracao.php"><i class="icon-settings1"></i>Configurações</a>
+									<!-- <a href="perfil.php"><i class="icon-user1"></i>Perfil</a>
+									<a href="configuracao.php"><i class="icon-settings1"></i>Configurações</a> -->
 									<a href="../config/logout.php"><i class="icon-log-out1"></i>Sair</a>
 								</div>
 							</div>

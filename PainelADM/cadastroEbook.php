@@ -80,11 +80,11 @@
 <body>
 
 	<!-- Loading starts -->
-	<div id="loading-wrapper">
+	<!-- <div id="loading-wrapper">
 		<div class="spinner-border" role="status">
 			<span class="sr-only">Carregando...</span>
 		</div>
-	</div>
+	</div> -->
 	<!-- Loading ends -->
 
 	<!-- Page wrapper start -->
@@ -112,14 +112,14 @@
 				</div>
 				<h6 class="profile-name">Miriã Maugé</h6>
 				<div class="profile-actions">
-					<a href="account-settings.html" data-toggle="tooltip" data-placement="top" title=""
+					<!-- <a href="account-settings.html" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Configurações">
 						<i class="icon-settings1"></i>
 					</a>
 					<a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="X">
 						<i class="icon-twitter1"></i>
-					</a>
+					</a> -->
 					<a href="login.html" class="red" data-toggle="tooltip" data-placement="top" title=""
 						data-original-title="Sair">
 						<i class="icon-power1"></i>
@@ -132,7 +132,7 @@
 			<div class="sidebar-content">
 
 				<!-- sidebar menu start -->
-				<?php include '../config/menu_lateral.php'; ?>
+				<?php include 'includes/menu_lateral.php'; ?>
 				<!-- sidebar menu end -->
 
 			</div>
@@ -146,7 +146,7 @@
 
 		<!-- Header -->
 		<?php 
-		include '../config/header.php';
+		include 'includes/header.php';
 		?>
 		<!-- fim -->
 

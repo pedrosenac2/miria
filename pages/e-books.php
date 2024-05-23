@@ -27,8 +27,8 @@
     <?php
         include('../includes/header.php');
     ?>
-
-    <div class="container">
+    
+    <div class="container container-ebook">
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center title">E-Books</h1>
@@ -93,7 +93,8 @@
     <?php
     include('../includes/footer.php');
     ?>
-
+    
+    
     <script src="../assets/js/vermais.js"></script>
     <script src="https://kit.fontawesome.com/2eeb56781b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

@@ -3,7 +3,7 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
     ?>
 
 <!-- Footer Começo -->
-<footer class="text-white text-center text-lg-start bg-dark my-5">
+<footer class="text-white text-center text-lg-start bg-dark mt-5" >
     <!-- Grid container -->
     <div class="container p-4">
         <!--Grid row-->
@@ -144,14 +144,3 @@ if (str_contains($_SERVER['REQUEST_URI'], 'index') || (substr($_SERVER['REQUEST_
 <?php 
 }
 ?>
-<style>
-    footer {
-        position: relative;
-        bottom: 0;
-        width: 100%;
-    }
-
-    .text-decoration-none {
-        text-decoration: none;
-    }
-</style>

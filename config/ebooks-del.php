@@ -15,7 +15,7 @@ try {
     $stmt->bindParam(':id', $id);
 
     $stmt->execute();
-    header("Location: ../adm-test/lista.php");
+    header("Location: ../PainelADM/index.php");
     exit();
 } catch (Exception $e) {
     echo $e->getMessage();
